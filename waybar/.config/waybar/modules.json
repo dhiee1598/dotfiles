@@ -47,28 +47,28 @@
 
   // Clock
   "clock": {
-    "format": "{:%H:%M %a}",
+    "format": "{:%I:%M %p}",
     "on-click": "ags toggle calendar",
-    "timezone": "Asia/Hong_Kong",
+    "timezone": "",
     "tooltip": false
   },
 
   // System
   "custom/system": {
-    "format": "",
+    "format": "\uf2db",
     "tooltip": false
   },
 
   // CPU
   "cpu": {
     "format": "/ C {usage}% ",
-    "on-click": "~/.config/ml4w/settings/system-monitor.sh"
+    "on-click": ""
   },
 
   // Memory
   "memory": {
     "format": "/ M {}% ",
-    "on-click": "~/.config/ml4w/settings/system-monitor.sh"
+    "on-click": ""
   },
 
   // Harddisc space used
@@ -76,7 +76,7 @@
     "interval": 30,
     "format": "D {percentage_used}% ",
     "path": "/",
-    "on-click": "~/.config/ml4w/settings/system-monitor.sh"
+    "on-click": ""
   },
 
   // Group Hardware
@@ -101,8 +101,8 @@
     "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50,
-    "on-click": "~/.config/ml4w/settings/networkmanager.sh",
-    "on-click-right": "~/.config/ml4w/scripts/nm-applet.sh toggle"
+    "on-click": "",
+    "on-click-right": ""
   },
 
   // Battery

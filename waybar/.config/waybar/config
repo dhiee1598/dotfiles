@@ -40,7 +40,8 @@
         "bluetooth",
         "battery", 
         "network",
-	"clock",
+	      "clock",
+        "group/hardware",
         "custom/exit"
     ]
 }
