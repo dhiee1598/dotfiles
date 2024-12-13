@@ -112,7 +112,7 @@ window#waybar.empty #window {
 
 #custom-exit {
   margin: 2px 0px 2px 0px;
-  font-size: 16px;
+  font-size: 18px;
   padding: 0px 13px 0px 10px;
   opacity: 0.8;
   transition: opacity 0.3s ease-in-out;
@@ -153,8 +153,8 @@ window#waybar.empty #window {
 }
 
 #custom-system {
-  margin-right: 16px;
-  font-size: 16px;
+  margin-right: 10px;
+  font-size: 18px;
   font-weight: bold;
   opacity: 0.8;
 }
