@@ -3,7 +3,7 @@
 #### List of packages
 
 default:
-ttf-firacode-nerd ttf-font-awesome gtk4 neovim 
+ttf-firacode-nerd ttf-font-awesome neovim 
 firefox kitty hyprland hyprpaper waybar papirus-icon-theme 
 git base-devel rofi pavucontrol hyprlock feh zsh nautilus
 stow wl-clipboard unzip
