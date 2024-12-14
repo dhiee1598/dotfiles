@@ -25,3 +25,7 @@ opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or 
 -- Split Windows --
 opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
+
+opt.termguicolors = true
+opt.background = "dark"
+opt.signcolumn = "yes"
