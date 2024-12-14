@@ -97,8 +97,11 @@ Edit your `.zshrc` file:
   ZSH_THEME="powerlevel10k/powerlevel10k"
   ```
 
+### Load `neofetch` in `.zshrc`
+Add the following line to the very top of your `.zshrc` file:
+```bash
+neofetch
+```
+
 ---
-
-Feel free to explore and customize further! 🎉
-
 
