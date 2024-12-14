@@ -1,16 +1,104 @@
-### MY DOTFILE
+# My Dotfiles
 
-#### List of packages
+Welcome to my dotfiles! This README provides an overview of the packages I use, configurations, and installation steps for my setup.
 
-default:
-ttf-firacode-nerd ttf-font-awesome neovim 
-firefox kitty hyprland hyprpaper waybar papirus-icon-theme 
-git base-devel rofi pavucontrol hyprlock feh zsh nautilus
-stow wl-clipboard unzip
+---
 
-aur:
-bibata-cursor-theme hyprshot swaync hypridle 
-visual-studio-code-bin spotify polkit-gnome wlogout
-xdg-desktop-portal-gtk xdg-desktop-portal-hyprland
+## Packages
 
+### Installed via `pacman`:
+- `ttf-firacode-nerd`: Nerd Fonts with Fira Code.
+- `ttf-font-awesome`: Font Awesome icons.
+- `neovim`: Text editor.
+- `firefox`: Web browser.
+- `kitty`: Terminal emulator.
+- `hyprland`: Wayland compositor.
+- `hyprpaper`: Wallpaper manager for Hyprland.
+- `waybar`: Status bar for Wayland.
+- `papirus-icon-theme`: Icon theme.
+- `git`: Version control.
+- `base-devel`: Development tools.
+- `rofi`: Application launcher.
+- `pavucontrol`: Audio control.
+- `hyprlock`: Lock screen.
+- `feh`: Image viewer.
+- `zsh`: Shell.
+- `nautilus`: File manager.
+- `stow`: Dotfile manager.
+- `wl-clipboard`: Clipboard utilities for Wayland.
+- `unzip`: Archive extractor.
+- `neofetch`: System information tool.
+
+### Installed via `yay` (AUR):
+- `bibata-cursor-theme`: Cursor theme.
+- `hyprshot`: Screenshot tool for Hyprland.
+- `swaync`: Notification center for Wayland.
+- `hypridle`: Idle management for Hyprland.
+- `visual-studio-code-bin`: Code editor.
+- `spotify`: Music streaming application.
+- `polkit-gnome`: Authentication agent for GNOME.
+- `wlogout`: Logout menu for Wayland.
+- `xdg-desktop-portal-gtk`: GTK support for desktop portals.
+- `xdg-desktop-portal-hyprland`: Hyprland support for desktop portals.
+
+---
+
+## Configuration
+
+### Setting Dark Theme
+To enable the dark theme:
+```bash
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+```
+
+### VS Code Custom Title Bar
+Add the following to your `settings.json` in VS Code:
+```json
+"window.titleBarStyle": "custom"
+```
+
+---
+
+## Installation Steps
+
+### Installing `yay`
+```bash
+git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+```
+
+### Zsh Plugins
+
+#### `zsh-autosuggestions`
+```bash
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+
+#### `zsh-syntax-highlighting`
+```bash
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+
+#### `you-should-use`
+```bash
+git clone https://github.com/MichaelAquilina/zsh-you-should-use.git $ZSH_CUSTOM/plugins/you-should-use
+```
+
+Add all these plugins to the `plugins` array in your `.zshrc` file.
+
+### Installing `powerlevel10k`
+```bash
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+```
+
+Edit your `.zshrc` file:
+- Find the line that sets `ZSH_THEME`.
+- Change its value to:
+  ```bash
+  ZSH_THEME="powerlevel10k/powerlevel10k"
+  ```
+
+---
+
+Feel free to explore and customize further! 🎉
+
+
