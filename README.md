@@ -109,6 +109,3 @@ neofetch
 ```
 
 ---
-
-Feel free to explore and customize further! 🎉
-
