@@ -66,6 +66,11 @@ Add the following to your `settings.json` in VS Code:
 git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 ```
 
+### Install Oh My Zsh
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
 ### Zsh Plugins
 
 #### `zsh-autosuggestions`
@@ -104,4 +109,6 @@ neofetch
 ```
 
 ---
+
+Feel free to explore and customize further! 🎉
 
