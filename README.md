@@ -40,6 +40,7 @@ Welcome to my dotfiles! This README provides an overview of the packages I use, 
 - `wlogout`: Logout menu for Wayland.
 - `xdg-desktop-portal-gtk`: GTK support for desktop portals.
 - `xdg-desktop-portal-hyprland`: Hyprland support for desktop portals.
+- `sddm-theme-tokyo-night-git`: Login theme using sddm
 
 ---
 
@@ -106,6 +107,12 @@ Edit your `.zshrc` file:
 Add the following line to the very top of your `.zshrc` file:
 ```bash
 neofetch
+```
+
+### Making `sddm.conf` file
+If sddm.conf is missing in the /etc/
+```bash
+sddm --example-config | sudo tee /etc/sddm.conf
 ```
 
 ---
