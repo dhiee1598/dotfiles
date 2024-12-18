@@ -49,7 +49,7 @@
   "clock": {
     "format": "{:%I:%M %p}",
     "on-click": "ags toggle calendar",
-    "timezone": "",
+    "timezone": "Asia/Manila",
     "tooltip": false
   },
 
