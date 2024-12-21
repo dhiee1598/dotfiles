@@ -48,7 +48,7 @@
   // Clock
   "clock": {
     "format": "{:%I:%M %p}",
-    "on-click": "ags toggle calendar",
+    "on-click": "gsimplecal",
     "timezone": "Asia/Manila",
     "tooltip": false
   },
@@ -102,7 +102,7 @@
     "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50,
-    "on-click": "",
+    "on-click": "nm-connection-editor",
     "on-click-right": ""
   },
 
