@@ -56,7 +56,8 @@
   // System
   "custom/system": {
     "format": "\uf2db",
-    "tooltip": false
+    "tooltip": false,
+    "on-click": "kitty htop"
   },
 
   // CPU
