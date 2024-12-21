@@ -28,6 +28,7 @@ return {
 				"lua_ls",
 				"emmet_ls",
 				"volar",
+				"intelephense",
 			},
 		})
 
@@ -36,6 +37,7 @@ return {
 				"prettier",
 				"stylua",
 				"eslint_d",
+				"easy-coding-standard",
 			},
 		})
 	end,

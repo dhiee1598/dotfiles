@@ -10,6 +10,10 @@ return {
 
 		-- Configure Treesitter --
 		treesitter.setup({
+			sync_install = false,
+			ignore_install = {},
+			auto_install = true,
+			modules = {},
 			hightlight = {
 				enable = true,
 			},
@@ -30,6 +34,7 @@ return {
 				"vue",
 				"lua",
 				"bash",
+        "php"
 			},
 			incremental_selection = {
 				enable = true,

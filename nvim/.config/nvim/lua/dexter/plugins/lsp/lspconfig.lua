@@ -80,6 +80,12 @@ return {
 					filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "vue" },
 				})
 			end,
+			["intelephense"] = function()
+				lspconfig["intelephense"].setup({
+					capabilities = capabilities,
+					filetypes = { "php" },
+				})
+			end,
 			["lua_ls"] = function()
 				-- configure lua server (with special settings)
 				lspconfig["lua_ls"].setup({

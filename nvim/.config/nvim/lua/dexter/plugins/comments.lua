@@ -10,7 +10,6 @@ return {
 
 		-- Enable comment --
 		comment.setup({
-			-- For commenting tsx, jsx, html files --
 			pre_hook = ts_context_commentstring.create_pre_hook(),
 		})
 	end,
