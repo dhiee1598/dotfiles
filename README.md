@@ -28,6 +28,7 @@ Welcome to my dotfiles! This README provides an overview of the packages I use, 
 - `wl-clipboard`: Clipboard utilities for Wayland.
 - `unzip`: Archive extractor.
 - `neofetch`: System information tool.
+- `gsimplecal` Calendar
 
 ### Installed via `yay` (AUR):
 - `bibata-cursor-theme`: Cursor theme.
