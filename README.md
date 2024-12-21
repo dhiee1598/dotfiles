@@ -115,7 +115,7 @@ If sddm.conf is missing in the /etc/
 sddm --example-config | sudo tee /etc/sddm.conf
 ```
 - Find the line that sets `[Theme]`
--Change the theme to:
+- Change the theme to:
   ```bash
   [Theme]
   Current=tokyo-night-sddm
