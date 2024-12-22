@@ -37,7 +37,6 @@ return {
 				"prettier",
 				"stylua",
 				"eslint_d",
-				"easy-coding-standard",
 				"phpmd",
 			},
 		})
