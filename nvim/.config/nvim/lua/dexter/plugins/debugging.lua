@@ -12,6 +12,20 @@ return {
 
 		require("dapui").setup()
 
+		vim.fn.sign_define("DapBreakpoint", {
+			text = "⬤",
+			texthl = "ErrorMsg",
+			linehl = "",
+			numhl = "ErrorMsg",
+		})
+
+		vim.fn.sign_define("DapBreakpointCondition", {
+			text = "⬤",
+			texthl = "ErrorMsg",
+			linehl = "",
+			numhl = "SpellBad",
+		})
+
 		dap.adapters.php = {
 			type = "executable",
 			command = "node",

@@ -1,5 +1,6 @@
 return {
 	"lewis6991/gitsigns.nvim",
+  "tpope/vim-fugitive",
 	event = { "BufReadPre", "BufNewFile" },
 	opts = {
 		on_attach = function(bufnr)
