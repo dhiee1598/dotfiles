@@ -29,6 +29,7 @@ Welcome to my dotfiles! This README provides an overview of the packages I use, 
 - `unzip`: Archive extractor.
 - `neofetch`: System information tool.
 - `gsimplecal` Calendar
+- `lazygit` Simple terminal UI for git commands
 
 ### Installed via `yay` (AUR):
 - `bibata-cursor-theme`: Cursor theme.
