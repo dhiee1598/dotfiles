@@ -8,7 +8,6 @@ Welcome to my dotfiles! This README provides an overview of the packages I use, 
 
 ### Installed via `pacman`:
 - `ttf-firacode-nerd`: Nerd Fonts with Fira Code.
-
 -`ttf-font-awesome`: Font Awesome icons.
 - `neovim`: Text editor.
 - `firefox`: Web browser.
