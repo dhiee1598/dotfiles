@@ -84,6 +84,9 @@ return {
 				lspconfig["intelephense"].setup({
 					capabilities = capabilities,
 					filetypes = { "php" },
+					root_dir = function()
+						return vim.loop.cwd()
+					end,
 				})
 			end,
 			["lua_ls"] = function()

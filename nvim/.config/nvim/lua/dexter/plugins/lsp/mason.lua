@@ -38,6 +38,7 @@ return {
 				"stylua",
 				"eslint_d",
 				"easy-coding-standard",
+				"phpmd",
 			},
 		})
 	end,

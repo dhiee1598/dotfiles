@@ -15,7 +15,7 @@ return {
 				json = { "prettier" },
 				lua = { "stylua" },
 				vue = { "prettier" },
-				php = { "easy-coding-standard" },
+				php = { "pretty-php" },
 			},
 			-- format_on_save = {
 			-- 	lsp_fallback = true,
