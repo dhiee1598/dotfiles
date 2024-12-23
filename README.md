@@ -38,7 +38,7 @@ Welcome to my dotfiles! This README provides an overview of the packages I use, 
 - `hyprpaper-git`: Wallpaper manager for Hyprland.
 - `hyprlock-git`: Lock screen.
 - `hypridle-git`: Idle management for Hyprland.
-- `hyprshot`: Screenshot tool for Hyprland.
+- `hyprshot-git`: Screenshot tool for Hyprland.
 
 ---
 
