@@ -33,7 +33,7 @@ Welcome to my dotfiles! This README provides an overview of the packages I use, 
 - `spotify`: Music streaming application.
 - `polkit-gnome`: Authentication agent for GNOME.
 - `wlogout`: Logout menu for Wayland.
-- `xdg-desktop-portal-hyprland`: Hyprland support for desktop portals.
+- `xdg-desktop-portal-hyprland-git`: Hyprland support for desktop portals.
 - `hyprland-git`: Wayland compositor.
 - `hyprpaper-git`: Wallpaper manager for Hyprland.
 - `hyprlock-git`: Lock screen.
