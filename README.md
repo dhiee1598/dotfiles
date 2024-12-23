@@ -8,22 +8,17 @@ Welcome to my dotfiles! This README provides an overview of the packages I use, 
 
 ### Installed via `pacman`:
 - `ttf-firacode-nerd`: Nerd Fonts with Fira Code.
--`ttf-font-awesome`: Font Awesome icons.
+- `ttf-font-awesome`: Font Awesome icons.
 - `neovim`: Text editor.
 - `firefox`: Web browser.
 - `kitty`: Terminal emulator.
-- `hyprland`: Wayland compositor.
-- `hyprpaper`: Wallpaper manager for Hyprland.
 - `waybar`: Status bar for Wayland.
 - `papirus-icon-theme`: Icon theme.
 - `git`: Version control.
 - `base-devel`: Development tools.
 - `rofi`: Application launcher.
 - `pavucontrol`: Audio control.
-- `hyprlock`: Lock screen.
-- `feh`: Image viewer.
 - `zsh`: Shell.
-- `nautilus`: File manager.
 - `stow`: Dotfile manager.
 - `wl-clipboard`: Clipboard utilities for Wayland.
 - `unzip`: Archive extractor.
@@ -33,16 +28,17 @@ Welcome to my dotfiles! This README provides an overview of the packages I use, 
 
 ### Installed via `yay` (AUR):
 - `bibata-cursor-theme`: Cursor theme.
-- `hyprshot`: Screenshot tool for Hyprland.
 - `swaync`: Notification center for Wayland.
-- `hypridle`: Idle management for Hyprland.
 - `visual-studio-code-bin`: Code editor.
 - `spotify`: Music streaming application.
 - `polkit-gnome`: Authentication agent for GNOME.
 - `wlogout`: Logout menu for Wayland.
-- `xdg-desktop-portal-gtk`: GTK support for desktop portals.
 - `xdg-desktop-portal-hyprland`: Hyprland support for desktop portals.
-- `sddm-theme-tokyo-night-git`: Login theme using sddm
+- `hyprland-git`: Wayland compositor.
+- `hyprpaper-git`: Wallpaper manager for Hyprland.
+- `hyprlock-git`: Lock screen.
+- `hypridle-git`: Idle management for Hyprland.
+- `hyprshot`: Screenshot tool for Hyprland.
 
 ---
 
@@ -109,18 +105,6 @@ Edit your `.zshrc` file:
 Add the following line to the very top of your `.zshrc` file:
 ```bash
 neofetch
-```
-
-### Making `sddm.conf` file
-If sddm.conf is missing in the /etc/
-```bash
-sddm --example-config | sudo tee /etc/sddm.conf
-```
-Find the line that sets `[Theme]`
-Change the theme to:
-```bash
-[Theme]
-Current=tokyo-night-sddm
 ```
 
 ---
