@@ -44,12 +44,6 @@ Welcome to my dotfiles! This README provides an overview of the packages I use, 
 
 ## Configuration
 
-### Setting Dark Theme
-To enable the dark theme:
-```bash
-gsettings set org.gnome.desktop.interface color-scheme prefer-dark
-```
-
 ### VS Code Custom Title Bar
 Add the following to your `settings.json` in VS Code:
 ```json
