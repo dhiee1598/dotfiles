@@ -77,7 +77,7 @@ return {
 				-- configure emmet language server
 				lspconfig["emmet_ls"].setup({
 					capabilities = capabilities,
-					filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "vue" },
+					filetypes = { "html", "javascript", "typescriptreact", "javascriptreact", "css", "sass", "scss", "vue" },
 				})
 			end,
 			["intelephense"] = function()
