@@ -13,7 +13,7 @@
 
 window#waybar {
   background-color: rgba(0, 0, 0, 0.8);
-  border-bottom: 2px solid @bordercolor;
+  border-bottom: 0px solid @bordercolor;
   background: transparent;
   transition: background-color 0.5s ease-in-out;
   
