@@ -25,6 +25,7 @@ Welcome to my dotfiles! This README provides an overview of the packages I use, 
 - `neofetch`: System information tool.
 - `gsimplecal` Calendar
 - `lazygit` Simple terminal UI for git commands
+- `ripgrep` Command-line tool for searching text within files.
 
 ### Installed via `yay` (AUR):
 - `bibata-cursor-theme`: Cursor theme.
