@@ -37,7 +37,7 @@ return {
 				"prettier",
 				"stylua",
 				"eslint_d",
-				"phpmd",
+				"phpstan",
 			},
 		})
 	end,
