@@ -30,6 +30,7 @@ return {
 				"volar",
 				"intelephense",
 			},
+      automatic_installation = true
 		})
 
 		mason_tool_installer.setup({
@@ -38,7 +39,9 @@ return {
 				"stylua",
 				"eslint_d",
 				"phpstan",
+        "php-debug-adapter"
 			},
+      automatic_installation = true
 		})
 	end,
 }

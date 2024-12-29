@@ -5,12 +5,41 @@ return {
 		"theHamsta/nvim-dap-virtual-text",
 		"nvim-telescope/telescope-dap.nvim",
 		"nvim-neotest/nvim-nio",
+		"jay-babu/mason-nvim-dap.nvim",
 	},
 	config = function()
 		local dap = require("dap")
 		local dapui = require("dapui")
+		local mason_dap = require("mason-nvim-dap")
 
-		require("dapui").setup()
+		mason_dap.setup({
+			handlers = {
+				function(config)
+					-- all sources with no handler get passed here
+
+					-- Keep original functionality
+					mason_dap.default_setup(config)
+				end,
+				php = function(config)
+					config.configuration = {
+						type = "php",
+						request = "launch",
+						port = 9003,
+						name = "PHP: Listen for Xdebug",
+						breakpoints = {
+							exception = {
+								Notice = false,
+								Warning = false,
+								Error = false,
+								Exception = false,
+								["*"] = false,
+							},
+						},
+					}
+					mason_dap.default_setup(config) -- don't forget this!
+				end,
+			},
+		})
 
 		vim.fn.sign_define("DapBreakpoint", {
 			text = "⬤",
@@ -26,20 +55,7 @@ return {
 			numhl = "SpellBad",
 		})
 
-		dap.adapters.php = {
-			type = "executable",
-			command = "node",
-			args = { "path/to/vscode-php-debug/out/phpDebug.js" },
-		}
-
-		dap.configurations.php = {
-			{
-				type = "php",
-				request = "launch",
-				name = "Listen for Xdebug",
-				port = 9003,
-			},
-		}
+		dapui.setup()
 
 		dap.listeners.before.attach.dapui_config = function()
 			dapui.open()
@@ -55,6 +71,10 @@ return {
 		end
 
 		vim.keymap.set("n", "<Leader>dt", dap.toggle_breakpoint, {})
-		vim.keymap.set("n", "<Leader>dc", dap.continue, {})
+		vim.keymap.set("n", "<F7>", dapui.toggle, { desc = "Debug: See last session result." })
+		vim.keymap.set("n", "<F5>", dap.continue, {})
+		vim.keymap.set("n", "<F10>", dap.step_over, {})
+		vim.keymap.set("n", "<F11>", dap.step_into, {})
+		vim.keymap.set("n", "<F9>", dap.step_out, {})
 	end,
 }
