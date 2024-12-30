@@ -66,7 +66,7 @@ git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
-### Install Oh My Zsh
+### Install `Oh My Zsh`
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
