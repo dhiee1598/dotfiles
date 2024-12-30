@@ -23,9 +23,10 @@ Welcome to my dotfiles! This README provides an overview of the packages I use, 
 - `wl-clipboard`: Clipboard utilities for Wayland.
 - `unzip`: Archive extractor.
 - `neofetch`: System information tool.
-- `gsimplecal` Calendar
-- `lazygit` Simple terminal UI for git commands
+- `gsimplecal` Calendar.
+- `lazygit` Simple terminal UI for git commands.
 - `ripgrep` Command-line tool for searching text within files.
+- `tmux` Terminal multiplexer.
 
 ### Installed via `yay` (AUR):
 - `bibata-cursor-theme`: Cursor theme.
@@ -58,6 +59,11 @@ Add the following to your `settings.json` in VS Code:
 ### Installing `yay`
 ```bash
 git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+```
+
+### Installing `Tmux Plugin Manager`
+```bash
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
 ### Install Oh My Zsh
