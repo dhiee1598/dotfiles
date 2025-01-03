@@ -13,15 +13,17 @@
     "on-click": "activate",
     "active-only": false,
     "all-outputs": true,
-    "format": "{}",
+    "format": "{icon}",
     "format-icons": {
-      "urgent": "",
-      "active": "",
-      "default": ""
-    },
-    "persistent-workspaces": {
-      "*": 5
+      "urgent": "●",
+      "active": "●",
+      "default": "●"
     }
+  },
+
+  "hyprland/window": {
+    "separate-outputs": true,
+    "max-length": 50
   },
 
   // Empty
@@ -30,10 +32,9 @@
   },
 
   // Rofi Application Launcher
-  "custom/appmenu": {
-    // START APPS LABEL
-    "format": "Apps",
-    // END APPS LABEL
+  "custom/arch-logo": {
+    "format": " ",
+    "tooltip": false,
     "on-click": "sleep 0.2;pkill rofi || rofi -show drun -replace",
     "tooltip-format": "Open the application launcher"
   },
@@ -101,9 +102,7 @@
     "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
     "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
     "tooltip-format-disconnected": "Disconnected",
-    "max-length": 50,
-    "on-click": "nm-connection-editor",
-    "on-click-right": ""
+    "on-click": "nm-connection-editor"
   },
 
   // Battery
@@ -125,7 +124,7 @@
   // Pulseaudio
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
-    "format": "{icon}  {volume}%",
+    "format": "{icon}    {volume}%",
     "format-bluetooth": "{volume}% {icon} {format_source}",
     "format-bluetooth-muted": " {icon} {format_source}",
     "format-muted": " {format_source}",

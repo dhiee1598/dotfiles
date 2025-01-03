@@ -1,22 +1,26 @@
-@define-color textcolor1 #f5f5f5;
+@define-color textcolor1 #F5ECD5;
 @define-color textcolor2 #0a0a0a;
 @define-color backgroundcolor #1A1F27;
 @define-color backgroundcolor2 #f5f5f5;
 @define-color bordercolor #f5f5f5;
 
 * {
-  font-family: "FiraCode Nerd Font", FontAwesome, Roboto, Helvetica, Arial,
-    sans-serif;
+  font-family: "Roboto", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
   border: none;
   border-radius: 0px;
 }
 
 window#waybar {
-  background-color: rgba(0, 0, 0, 0.8);
-  border-bottom: 0px solid @bordercolor;
-  background: transparent;
-  transition: background-color 0.5s ease-in-out;
-  
+  border-radius: 30px;
+  background: linear-gradient(
+    90deg,
+    rgba(3, 77, 72, 1) 0%,
+    rgba(8, 47, 66, 1) 25%,
+    rgba(2, 30, 47, 1) 50%,
+    rgba(8, 47, 66, 1) 75%,
+    rgba(3, 77, 72, 1) 100%
+  );
+  transition: background 0.5s ease-in-out;
 }
 
 /* -----------------------------------------------------
@@ -24,42 +28,30 @@ window#waybar {
  * ----------------------------------------------------- */
 
 #workspaces {
-  background: @backgroundcolor;
-  margin: 2px 15px 0px 0px;
-  padding: 0px 2px;
-  border-radius: 20px 20px 20px 20px;
-  border: 3px solid @bordercolor;
-  font-weight: bold;
-  opacity: 0.8;
-  font-size: 12px;
+  font-size: 8px;
   color: @textcolor1;
   transition: opacity 0.3s ease-in-out;
+  padding: 0px 2px;
+  margin: 0px 15px 0px 0px;
 }
 
 #workspaces button {
-  padding: 0px 8px;
+  padding: 0px 2px;
   margin: 3px 5px;
-  border-radius: 12px;
-  border: 0px;
-  color: @textcolor1;
-  background-color: @backgroundcolor;
-  transition: all 0.3s ease-in-out;
-  opacity: 0.6;
+  transition: all 0.2s ease-in-out;
+}
+#workspaces button.active {
+  font-size: 18px;
+  padding: 0px 2px;
 }
 
-#workspaces button.active {
-  color: @textcolor2;
-  background: @backgroundcolor2;
-  border-radius: 15px;
-  min-width: 35px;
-  opacity: 1;
+#workspaces button.inactive {
+  font-size: 10px;
+  padding: 0px 2px;
 }
 
 #workspaces button:hover {
-  color: @textcolor2;
-  background: @backgroundcolor2;
-  border-radius: 10px;
-  opacity: 0.8;
+  background: transparent;
 }
 
 /* -----------------------------------------------------
@@ -67,14 +59,9 @@ window#waybar {
  * ----------------------------------------------------- */
 
 #window {
-  background: @backgroundcolor;
-  margin: 2px 15px 0px 0px;
-  padding: 2px 10px;
-  border-radius: 25px;
   color: @textcolor1;
-  font-size: 12px;
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out;
+  font-size: 14px;
+  margin: 0px 15px 0px 0px;
 }
 
 window#waybar.empty #window {
@@ -97,26 +84,26 @@ window#waybar.empty #window {
  * Custom Modules
  * ----------------------------------------------------- */
 
-#custom-appmenu {
-  background-color: @backgroundcolor;
-  font-size: 12px;
-  color: @textcolor1;
-  border-radius: 25px;
-  padding: 5px 15px;
-  margin: 2px 15px 0px 0px;
-  border: 3px solid @bordercolor;
-}
+#custom-arch-logo {
+  background-image: url("./arch-icon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 25px 25px;
+  padding: 15px 0px 15px 15px;
+  margin: 0px 10px 0px 20px;}
 
 /* -----------------------------------------------------
  * Custom Exit
  * ----------------------------------------------------- */
 
 #custom-exit {
-  margin: 2px 0px 2px 0px;
+  margin: 0px 20px 0px 0px;
   font-size: 18px;
   padding: 0px 13px 0px 10px;
   opacity: 0.8;
   transition: opacity 0.3s ease-in-out;
+  color: @textcolor1;
 }
 
 /* -----------------------------------------------------
@@ -142,22 +129,18 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #clock {
-  background-color: @backgroundcolor;
-  font-size: 12px;
+  font-size: 14px;
   color: @textcolor1;
-  border-radius: 25px;
-  padding: 2px 10px;
-  margin: 2px 15px 0px 0px;
-  opacity: 0.9;
-  border: 3px solid @bordercolor;
-  transition: opacity 0.3s ease-in-out;
+  margin: 0px 15px 0px 0px;
+  font-weight: 600;
 }
 
 #custom-system {
-  margin-right: 10px;
+  margin-right: 15px;
   font-size: 18px;
   font-weight: bold;
   opacity: 0.8;
+  color: @textcolor1;
 }
 
 /* -----------------------------------------------------
@@ -165,13 +148,10 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #backlight {
-  background-color: @backgroundcolor;
-  font-size: 12px;
+  font-size: 14px;
   color: @textcolor2;
-  border-radius: 5px;
   padding: 2px 10px;
   margin: 0px 15px;
-  opacity: 0.85;
 }
 
 /* -----------------------------------------------------
@@ -179,14 +159,9 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #pulseaudio {
-  background-color: @backgroundcolor;
-  font-size: 12px;
-  color: @textcolor1;
-  border-radius: 25px;
-  border: 3px solid @bordercolor;
-  padding: 2px 10px;
-  margin: 0px 0px;
-  opacity: 0.85;
+  font-size: 14px;
+  color: #009990;
+  font-weight: 600;
 }
 
 #pulseaudio.muted {
@@ -199,23 +174,17 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #network {
-  background-color: @backgroundcolor;
-  font-size: 12px;
+  font-size: 14px;
   color: @textcolor1;
-  border-radius: 25px;
-  border: 3px solid @bordercolor;
-  padding: 2px 10px;
   margin: 0px 15px;
-  opacity: 0.85;
+  font-weight: 600;
 }
 
 #network.ethernet {
-  background-color: @backgroundcolor;
   color: @textcolor1;
 }
 
 #network.wifi {
-  background-color: @backgroundcolor;
   color: @textcolor1;
 }
 
@@ -226,13 +195,10 @@ window#waybar.empty #window {
 #bluetooth,
 #bluetooth.on,
 #bluetooth.connected {
-  background-color: @backgroundcolor;
-  font-size: 12px;
+  font-size: 14px;
   color: @textcolor1;
-  border-radius: 5px;
   padding: 2px 10px;
   margin: 0px 15px;
-  opacity: 0.85;
 }
 
 #bluetooth.off {
@@ -246,19 +212,15 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #battery {
-  background-color: @backgroundcolor;
   font-size: 12px;
   color: @textcolor1;
-  border-radius: 5px;
   padding: 2px 15px;
   margin: 0px 15px;
-  opacity: 0.85;
 }
 
 #battery.charging,
 #battery.plugged {
   color: @textcolor1;
-  background-color: @backgroundcolor;
 }
 
 @keyframes blink {
@@ -269,7 +231,6 @@ window#waybar.empty #window {
 }
 
 #battery.critical:not(.charging) {
-  background-color: #f53c3c;
   color: @textcolor3;
   animation-name: blink;
   animation-duration: 0.5s;

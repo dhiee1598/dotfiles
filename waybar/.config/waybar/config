@@ -10,10 +10,10 @@
 {
     // General Settings
     "layer": "top",
-    "margin-top": 5,
+    "margin-top": 10,
     "margin-bottom": 0,
-    "margin-left": 14,
-    "margin-right": 14,    
+    "margin-left": 100,
+    "margin-right": 100,    
     "spacing": 0,
 
     // Load Modules
@@ -23,7 +23,7 @@
 
     // Modules Left
     "modules-left": [
-        "custom/appmenu",
+        "custom/arch-logo",
         "hyprland/workspaces",
         "custom/empty"
     ],
