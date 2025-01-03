@@ -5,14 +5,16 @@ return {
 		local lualine = require("lualine")
 		local lazy_status = require("lazy.status")
 		local colors = {
-			blue = "#65D1FF",
-			green = "#3EFFDC",
-			violet = "#FF61EF",
-			yellow = "#FFDA7B",
-			red = "FF4A4A",
-			fb = "#c3ccdc",
-			bg = "#112638",
-			inactive_bg = "#2c3043",
+			blue = "#458588",
+			green = "#98971a",
+			violet = "#b16286",
+			yellow = "#d79921",
+			red = "#cc241d",
+			fb = "#d5c4a1",
+			bg = "#282828",
+			inactive_bg = "#504945",
+			fg = "#ebdbb2",
+			semilightgray = "#928374",
 		}
 
 		local themes_lualine = {
@@ -58,7 +60,7 @@ return {
 					{
 						lazy_status.updates,
 						cond = lazy_status.has_updates,
-						color = { fg = "#ff9e64" },
+						color = { fg = colors.yellow },
 					},
 					{ "encoding " },
 					{ "fileformat" },
@@ -68,3 +70,4 @@ return {
 		})
 	end,
 }
+

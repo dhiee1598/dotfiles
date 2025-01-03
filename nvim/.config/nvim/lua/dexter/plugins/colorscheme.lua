@@ -1,11 +1,11 @@
 ---@diagnostic disable: unused-local
 return {
-	"folke/tokyonight.nvim",
+   "ellisonleao/gruvbox.nvim",
 	lazy = false,
 	priority = 1000,
 	opts = {
-    style = "storm",
-		transparent = true,
+    style = "dark",
+		transparent_mode = true,
 		styles = {
 			sidebars = "transparent",
 			floats = "transparent",
@@ -21,8 +21,8 @@ return {
 		on_highlights = function(highlights, colors) end,
 	},
 	config = function(_, opts)
-		local tokyonight = require("tokyonight")
-		tokyonight.setup(opts)
-		tokyonight.load()
+		local gruvbox = require("gruvbox")
+		gruvbox.setup(opts)
+		gruvbox.load()
 	end,
 }
