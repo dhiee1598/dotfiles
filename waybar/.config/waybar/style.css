@@ -30,7 +30,6 @@ window#waybar {
 #workspaces {
   font-size: 8px;
   color: @textcolor1;
-  transition: opacity 0.3s ease-in-out;
   padding: 0px 2px;
   margin: 0px 15px 0px 0px;
 }

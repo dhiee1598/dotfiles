@@ -13,32 +13,7 @@ return {
 		local mason_dap = require("mason-nvim-dap")
 
 		mason_dap.setup({
-			handlers = {
-				function(config)
-					-- all sources with no handler get passed here
-
-					-- Keep original functionality
-					mason_dap.default_setup(config)
-				end,
-				php = function(config)
-					config.configuration = {
-						type = "php",
-						request = "launch",
-						port = 9003,
-						name = "PHP: Listen for Xdebug",
-						breakpoints = {
-							exception = {
-								Notice = false,
-								Warning = false,
-								Error = false,
-								Exception = false,
-								["*"] = false,
-							},
-						},
-					}
-					mason_dap.default_setup(config) -- don't forget this!
-				end,
-			},
+			handlers = {},
 		})
 
 		vim.fn.sign_define("DapBreakpoint", {
@@ -56,6 +31,24 @@ return {
 		})
 
 		dapui.setup()
+
+		dap.configurations.php = {
+			{
+				name = "PHP: Listen for Xdebug",
+				port = 9003,
+				request = "launch",
+				type = "php",
+				breakpoints = {
+					exception = {
+						Notice = false,
+						Warning = false,
+						Error = false,
+						Exception = false,
+						["*"] = false,
+					},
+				},
+			},
+		}
 
 		dap.listeners.before.attach.dapui_config = function()
 			dapui.open()

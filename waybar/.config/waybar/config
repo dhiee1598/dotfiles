@@ -12,8 +12,8 @@
     "layer": "top",
     "margin-top": 10,
     "margin-bottom": 0,
-    "margin-left": 100,
-    "margin-right": 100,    
+    "margin-left": 180,
+    "margin-right": 180,    
     "spacing": 0,
 
     // Load Modules
