@@ -1,4 +1,4 @@
-# My Dotfiles
+## My Dotfiles
 
 Welcome to my dotfiles! This provides an overview of the packages I use, configurations, and installation steps for my setup.
 
