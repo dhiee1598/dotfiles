@@ -44,16 +44,6 @@ Welcome to my dotfiles! This provides an overview of the packages I use, configu
 
 ---
 
-## Configuration
-
-### VS Code Custom Title Bar
-Add the following to your `settings.json` in VS Code:
-```json
-"window.titleBarStyle": "custom"
-```
-
----
-
 ## Installation Steps
 
 ### Installing `yay`
@@ -71,41 +61,43 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-### Zsh Plugins
-
-#### `zsh-autosuggestions`
-```bash
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-```
-
-#### `zsh-syntax-highlighting`
-```bash
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-```
-
-#### `you-should-use`
-```bash
-git clone https://github.com/MichaelAquilina/zsh-you-should-use.git $ZSH_CUSTOM/plugins/you-should-use
-```
-
-Add all these plugins to the `plugins` array in your `.zshrc` file.
-
 ### Installing `powerlevel10k`
 ```bash
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
 
-Edit your `.zshrc` file:
-- Find the line that sets `ZSH_THEME`.
-- Change its value to:
-  ```bash
-  ZSH_THEME="powerlevel10k/powerlevel10k"
-  ```
+---
 
-### Load `neofetch` in `.zshrc`
-Add the following line to the very top of your `.zshrc` file:
-```bash
-neofetch
+## Configuration
+
+### VS Code Custom Title Bar
+Add the following to your `settings.json` in VS Code:
+```json
+"window.titleBarStyle": "custom"
 ```
+
+---
+
+## Zsh Plugins
+
+### `zsh-autosuggestions`
+```bash
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+
+### `zsh-syntax-highlighting`
+```bash
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+
+### `you-should-use`
+```bash
+git clone https://github.com/MichaelAquilina/zsh-you-should-use.git $ZSH_CUSTOM/plugins/you-should-use
+```
+
+Edit your `.zshrc` file:
+- Add the following line to the very top of the file: `neofetch`.
+- Add all those plugins to the `plugins` array.
+- Find the line that sets `ZSH_THEME` and change its value to: `powerlevel10k/powerlevel10k`.
 
 ---
