@@ -15,32 +15,30 @@ Welcome to my dotfiles! This provides an overview of the packages I use, configu
 - `waybar`: Status bar for Wayland.
 - `papirus-icon-theme`: Icon theme.
 - `git`: Version control.
-- `base-devel`: Development tools.
 - `rofi`: Application launcher.
 - `pavucontrol`: Audio control.
 - `zsh`: Shell.
 - `stow`: Dotfile manager.
 - `wl-clipboard`: Clipboard utilities for Wayland.
-- `unzip`: Archive extractor.
 - `neofetch`: System information tool.
 - `gsimplecal` Calendar.
 - `lazygit` Simple terminal UI for git commands.
 - `ripgrep` Command-line tool for searching text within files.
 - `tmux` Terminal multiplexer.
+- `xdg-desktop-portal-hyprland`: Hyprland support for desktop portals.
+- `hyprland`: Wayland compositor.
+- `hyprpaper`: Wallpaper manager for Hyprland.
+- `hyprlock`: Lock screen.
+- `hypridle`: Idle management for Hyprland.
+- `swaync`: Notification center for Wayland.
+- `polkit-gnome`: Authentication agent for GNOME.
 
 ### Installed via `yay` (AUR):
 - `bibata-cursor-theme`: Cursor theme.
-- `swaync`: Notification center for Wayland.
 - `visual-studio-code-bin`: Code editor.
 - `spotify`: Music streaming application.
-- `polkit-gnome`: Authentication agent for GNOME.
 - `wlogout`: Logout menu for Wayland.
-- `xdg-desktop-portal-hyprland-git`: Hyprland support for desktop portals.
-- `hyprland-git`: Wayland compositor.
-- `hyprpaper-git`: Wallpaper manager for Hyprland.
-- `hyprlock-git`: Lock screen.
-- `hypridle-git`: Idle management for Hyprland.
-- `hyprshot-git`: Screenshot tool for Hyprland.
+- `hyprshot`: Screenshot tool for Hyprland.
 
 ---
 
