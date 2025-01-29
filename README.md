@@ -4,7 +4,7 @@ Welcome to my dotfiles! This provides an overview of the packages I use, configu
 
 ---
 
-## Packages
+### Packages
 
 ### Installed via `pacman`:
 - `ttf-firacode-nerd`: Nerd Fonts with Fira Code.
