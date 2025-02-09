@@ -98,4 +98,8 @@ Edit your `.zshrc` file:
 - Add all those plugins to the `plugins` array.
 - Find the line that sets `ZSH_THEME` and change its value to: `powerlevel10k/powerlevel10k`.
 
+If Tmux Plugins not loading type these command
+```bash
+cd ~/.tmux/plugins/tpm/scripts && ./install_plugins.sh
+```
 ---
