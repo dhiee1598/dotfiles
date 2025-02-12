@@ -29,6 +29,7 @@ return {
 				"emmet_ls",
 				"volar",
 				"intelephense",
+        "ts_ls"
 			},
       automatic_installation = true
 		})
