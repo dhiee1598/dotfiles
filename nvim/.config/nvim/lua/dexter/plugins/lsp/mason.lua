@@ -28,10 +28,9 @@ return {
 				"lua_ls",
 				"emmet_ls",
 				"volar",
-				"intelephense",
-        "ts_ls"
+				"ts_ls",
 			},
-      automatic_installation = true
+			automatic_installation = true,
 		})
 
 		mason_tool_installer.setup({
@@ -39,10 +38,8 @@ return {
 				"prettier",
 				"stylua",
 				"eslint_d",
-				"phpstan",
-        "php-debug-adapter"
 			},
-      automatic_installation = true
+			automatic_installation = true,
 		})
 	end,
 }
