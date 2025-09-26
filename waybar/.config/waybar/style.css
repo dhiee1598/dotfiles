@@ -1,10 +1,10 @@
 /* === Color Palette === */
-@define-color fg #ECEFF4;
-@define-color bg rgba(28, 33, 43, 0.8);
-@define-color accent #88C0D0;
-@define-color warning #EBCB8B;
-@define-color error #BF616A;
-@define-color good #A3BE8C;
+@define-color fg      #93a1a1;  /* base1 - default text */
+@define-color bg      rgba(0, 43, 54, 0.8); /* base03 - background */
+@define-color accent  #268bd2;  /* blue - highlight/accent */
+@define-color warning #b58900;  /* yellow - warnings */
+@define-color error   #dc322f;  /* red - errors */
+@define-color good    #859900;  /* green - success */
 
 /* === Base === */
 * {
@@ -14,9 +14,10 @@
 }
 
 window#waybar {
-  border-radius: 15px;
+  border-radius: 25px;
   background: @bg;
   transition: background 0.3s ease;
+  border: 2px solid #586e75;
 }
 
 /* === Workspaces === */
