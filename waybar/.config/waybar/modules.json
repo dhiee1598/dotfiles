@@ -1,12 +1,5 @@
-//  __  __           _       _
-// |  \/  | ___   __| |_   _| | ___  ___
-// | |\/| |/ _ \ / _` | | | | |/ _ \/ __|
-// | |  | | (_) | (_| | |_| | |  __/\__ \
-// |_|  |_|\___/ \__,_|\__,_|_|\___||___/
-//
-//
 {
-  // Workspaces
+  // === Hyprland Workspaces ===
   "hyprland/workspaces": {
     "on-scroll-up": "hyprctl dispatch workspace r-1",
     "on-scroll-down": "hyprctl dispatch workspace r+1",
@@ -15,70 +8,64 @@
     "all-outputs": true,
     "format": "{icon}",
     "format-icons": {
-      "urgent": "●",
-      "active": "●",
-      "default": "●"
+      "1": "󰈹", // Browser
+      "2": "", // Terminal
+      "3": "", // Code
+      "4": "", // Games
+      "5": "", // Cloud
+      "default": "",
+      "active": "",
+      "urgent": ""
     }
   },
 
+  // Current window title
   "hyprland/window": {
     "separate-outputs": true,
     "max-length": 50
   },
 
-  // Empty
-  "custom/empty": {
-    "format": ""
-  },
-
-  // Rofi Application Launcher
+  // Arch Rofi launcher
   "custom/arch-logo": {
     "format": " ",
     "tooltip": false,
-    "on-click": "sleep 0.2;pkill rofi || rofi -show drun -replace",
-    "tooltip-format": "Open the application launcher"
+    "on-click": "rofi -show drun"
   },
 
-  // Power Menu
+  // Exit / Power menu
   "custom/exit": {
-    "format": "",
+    "format": " ",
     "on-click": "wlogout",
     "tooltip-format": "Power Menu"
   },
 
   // Clock
   "clock": {
-    "format": "{:%I:%M %p}",
-    "on-click": "gsimplecal",
+    "format": "  {:%I:%M %p}",
+    "format-alt": "  {:%a, %b %d}",
     "timezone": "Asia/Manila",
+    "on-click-right": "gnome-calendar",
     "tooltip": false
-  },
-
-  // System
-  "custom/system": {
-    "format": "\uf2db",
-    "tooltip": false,
-    "on-click": "kitty htop"
   },
 
   // CPU
   "cpu": {
-    "format": "/ C {usage}% ",
-    "on-click": ""
+    "format": "  {usage}%",
+    "tooltip": true
   },
 
   // Memory
   "memory": {
-    "format": "/ M {}% ",
-    "on-click": ""
+    "format": "󰍛  {}%",
+    "tooltip": true
   },
 
-  // Harddisc space used
+  // Disk
   "disk": {
     "interval": 30,
-    "format": "D {percentage_used}% ",
-    "path": "/",
-    "on-click": ""
+    "format": "  {percentage_used}%",
+    "on-click": "kitty -e htop",
+    "path": "/"
   },
 
   // Group Hardware
@@ -89,96 +76,47 @@
       "children-class": "not-memory",
       "transition-left-to-right": false
     },
-    "modules": ["custom/system", "disk", "cpu", "memory"]
+    "modules": ["disk", "cpu", "memory"]
   },
 
   // Network
   "network": {
-    "format": "{ifname}",
-    "format-wifi": "   {signalStrength}%",
-    "format-ethernet": " {ifname}",
-    "format-disconnected": "Disconnected",
-    "tooltip-format": " {ifname} via {gwaddri}",
-    "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
-    "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
-    "tooltip-format-disconnected": "Disconnected",
+    "format-wifi": " {essid}",
+    "format-ethernet": "󰈀  {ifname}",
+    "format-disconnected": "⚠ Disconnected",
+    "tooltip-format-wifi": " {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%",
+    "tooltip-format-ethernet": "󰈀 {ifname}\nIP: {ipaddr}",
     "on-click": "nm-connection-editor"
   },
 
   // Battery
   "battery": {
     "states": {
-      // "good": 95,
       "warning": 30,
       "critical": 15
     },
     "format": "{icon} {capacity}%",
-    "format-charging": "  {capacity}%",
-    "format-plugged": "  {capacity}%",
-    "format-alt": "{icon}  {time}",
-    // "format-good": "", // An empty format will hide the module
-    // "format-full": "",
-    "format-icons": [" ", " ", " ", " ", " "]
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-icons": ["", "", "", "", ""]
   },
 
-  // Pulseaudio
+  // Audio
   "pulseaudio": {
-    // "scroll-step": 1, // %, can be a float
-    "format": "{icon}    {volume}%",
-    "format-bluetooth": "{volume}% {icon} {format_source}",
-    "format-bluetooth-muted": " {icon} {format_source}",
-    "format-muted": " {format_source}",
-    "format-source": "{volume}% ",
-    "format-source-muted": "",
+    "format": "{icon}  {volume}%",
+    "format-muted": " Muted",
+    "on-click": "pavucontrol",
     "format-icons": {
-      "headphone": " ",
-      "hands-free": " ",
-      "headset": " ",
-      "phone": " ",
-      "portable": " ",
-      "car": " ",
-      "default": ["", "", ""]
-    },
-    "on-click": "pavucontrol"
+      "default": ["", "", ""]
+    }
   },
 
   // Bluetooth
   "bluetooth": {
     "format": " {status}",
     "format-disabled": "",
-    "format-off": "",
     "interval": 30,
-    "on-click": "blueman-manager",
-    "format-no-controller": ""
-  },
-
-  // Other
-  "user": {
-    "format": "{user}",
-    "interval": 60,
-    "icon": false
-  },
-
-  // backlight:
-  "backlight": {
-    "format": "{icon} {percent}%",
-    "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      ""
-    ],
-    "scroll-step": 1
+    "on-click": "blueman-manager"
   }
 }
+

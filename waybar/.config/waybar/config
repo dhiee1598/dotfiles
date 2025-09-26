@@ -1,46 +1,30 @@
-// __        __          _                 
-// \ \      / /_ _ _   _| |__   __ _ _ __  
-//  \ \ /\ / / _` | | | | '_ \ / _` | '__| 
-//   \ V  V / (_| | |_| | |_) | (_| | |    
-//    \_/\_/ \__,_|\__, |_.__/ \__,_|_|    
-//                 |___/                   
-//  
-// ----------------------------------------------------- 
-//
 {
-    // General Settings
-    "layer": "top",
-    "margin-top": 10,
-    "margin-bottom": 0,
-    "margin-left": 180,
-    "margin-right": 180,    
-    "spacing": 0,
+  "layer": "top",
+  "margin-top": 10,
+  "margin-bottom": 0,
+  "margin-left": 10,
+  "margin-right": 10,
+  "spacing": 8,
 
-    // Load Modules
-    "include": [
-        "~/.config/waybar/modules.json"
-    ],
+  "include": ["~/.config/waybar/modules.json"],
 
-    // Modules Left
-    "modules-left": [
-        "custom/arch-logo",
-        "hyprland/workspaces",
-        "custom/empty"
-    ],
+  "modules-left": [
+    "custom/arch-logo",
+    "hyprland/workspaces",
+    "hyprland/window"
+  ],
 
-    // Modules Center
-    "modules-center": [
-        "hyprland/window"
-    ],
+  "modules-center": [
+    "clock"
+  ],
 
-    // Modules Right    
-    "modules-right": [
-        "pulseaudio",
-        "bluetooth",
-        "battery", 
-        "network",
-	      "clock",
-        "group/hardware",
-        "custom/exit"
-    ]
+  "modules-right": [
+    "pulseaudio",
+    "bluetooth",
+    "battery",
+    "network",
+    "group/hardware",
+    "custom/exit"
+  ]
 }
+
