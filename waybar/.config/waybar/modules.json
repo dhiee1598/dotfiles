@@ -6,18 +6,14 @@
     "on-click": "activate",
     "active-only": false,
     "all-outputs": true,
-    "format": "{icon}",
+    "format": "{id}",
     "format-icons": {
-      "1": "󰈹", // Browser
-      "2": "", // Terminal
-      "3": "", // Code
-      "4": "", // Games
-      "5": "", // Cloud
       "default": "",
       "active": "",
       "urgent": ""
     }
   },
+
 
   // Current window title
   "hyprland/window": {
