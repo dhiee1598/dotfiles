@@ -1,12 +1,17 @@
 * {
-    bg-col:  #021e2f;
+    bg-col:      #021e2f;
     bg-col-light: #082f42;
-    border-col: #034d48;
+    border-col:  #034d48;
     selected-col: #324860;
-    blue: #7A828E;
-    fg-col: #51788A;
-    fg-col2: #A9AFB9;
-    grey: #6c7086;
+    blue:        #7A828E;
+    fg-col:      #51788A;
+    fg-col2:     #A9AFB9;
+    grey:        #6c7086;
+    
+    // --- New Error Color Definition ---
+    // Using a bright, contrasting color for the alert text
+    error-col:   #D08770; // Soft, attention-grabbing orange/red (Nord-style)
+    
     width: 600;
     font: "FiraCode Nerd Font 14";
 }
@@ -81,7 +86,7 @@ element selected {
 
 mode-switcher {
     spacing: 0;
-  }
+ }
 
 button {
     padding: 10px;
@@ -96,16 +101,28 @@ button selected {
   text-color: @blue;
 }
 
+/* 🚨 ENHANCED MESSAGE/ERROR BOX STYLE 🚨 */
 message {
     background-color: @bg-col-light;
-    margin: 2px;
+    margin: 10px 20px 20px 20px; /* Increased margin for separation */
     padding: 2px;
     border-radius: 5px;
+    
+    // Add a strong border to draw attention
+    border: 2px;
+    border-color: @error-col;
 }
 
 textbox {
     padding: 6px;
-    margin: 20px 0px 0px 20px;
-    text-color: @blue;
+    // Removing custom margins, letting the parent 'message' handle placement
+    margin: 0; 
+    
+    // CRITICAL: Use the stark error color for the text
+    text-color: @error-col;
+    
     background-color: @bg-col-light;
+    
+    // Center the text for a clean, alert look
+    horizontal-align: 0.5; 
 }

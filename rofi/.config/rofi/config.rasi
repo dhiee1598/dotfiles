@@ -1,14 +1,4 @@
 configuration{
-    // Fix 1: Stop Rofi from allowing custom, non-matched input.
-    allow-custom: false;
-    
-    // Fix 2: Override the command for the internal 'run' logic
-    //        with a command that always succeeds but does nothing.
-    // 'true' is a basic shell command that just returns success (0).
-    // This prevents both "Failed to execute: 'rnaodm'" and "Failed to parse: ''".
-    run-command: "true"; 
-
-    // --- Your Existing Settings ---
     modi: "window,combi,drun";
     show-icons: true;
     terminal: "kitty";
