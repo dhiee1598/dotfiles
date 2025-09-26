@@ -20,12 +20,9 @@ Welcome to my dotfiles! This provides an overview of the packages I use, configu
 - `zsh`: Shell.
 - `stow`: Dotfile manager.
 - `wl-clipboard`: Clipboard utilities for Wayland.
-- `neofetch`: System information tool.
-- `gsimplecal` Calendar.
 - `lazygit` Simple terminal UI for git commands.
 - `ripgrep` Command-line tool for searching text within files.
 - `tmux` Terminal multiplexer.
-- `xdg-desktop-portal-hyprland`: Hyprland support for desktop portals.
 - `hyprland`: Wayland compositor.
 - `hyprpaper`: Wallpaper manager for Hyprland.
 - `hyprlock`: Lock screen.
@@ -39,6 +36,7 @@ Welcome to my dotfiles! This provides an overview of the packages I use, configu
 - `spotify`: Music streaming application.
 - `wlogout`: Logout menu for Wayland.
 - `hyprshot`: Screenshot tool for Hyprland.
+- `neofetch`: System information tool.
 
 ---
 
