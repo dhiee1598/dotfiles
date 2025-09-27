@@ -28,6 +28,7 @@ Welcome to my dotfiles! This provides an overview of the packages I use, configu
 - `hyprlock`: Lock screen.
 - `hypridle`: Idle management for Hyprland.
 - `swaync`: Notification center for Wayland.
+- `network-manager-applet` Tray icon and GUI for managing network connections.
 
 ### Installed via `yay` (AUR):
 - `bibata-cursor-theme`: Cursor theme.
