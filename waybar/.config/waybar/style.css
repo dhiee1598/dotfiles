@@ -22,7 +22,7 @@ window#waybar {
 
 /* === Workspaces === */
 #workspaces button {
-  padding: 0 8px;
+  padding: 0 5px;
   margin: 2px 4px;
   color: @fg;
   background: transparent;
@@ -59,7 +59,7 @@ window#waybar {
   background-size: 22px 22px;
   background-repeat: no-repeat;
   background-position: center;
-  margin: 0 10px;
+  margin: 0 5px 0 15px;
   padding: 12px;
 }
 
@@ -67,7 +67,7 @@ window#waybar {
 #clock {
   font-weight: bold;
   color: @fg;
-  padding: 0 14px;
+  padding: 0 10px;
   border-radius: 10px;
 }
 
@@ -86,13 +86,14 @@ window#waybar {
 #custom-spotify-prev,
 #custom-spotify-play,
 #custom-spotify-next {
-  padding: 0px 6px;
+  padding: 0px 6px 0px 6px;
   color: @fg;
+  font-size: 18px;
 }
 
 /* === Network === */
 #network {
-  padding: 0 10px;
+  padding: 0 5px;
   color: @fg;
   font-weight: 600;
 }
@@ -115,7 +116,7 @@ window#waybar {
 /* === Audio === */
 #pulseaudio {
   color: @fg;
-  padding: 0 10px;
+  padding: 0 5px;
 }
 #pulseaudio.muted {
   color: @warning;
@@ -124,7 +125,7 @@ window#waybar {
 /* === Bluetooth === */
 #bluetooth {
   color: @fg;
-  padding: 0 10px;
+  padding: 0 5px;
 }
 
 /* === Exit button === */
@@ -138,7 +139,7 @@ window#waybar {
 #custom-spotify-title {
   font-weight: bold;
   font-size: 12px;
-  padding: 0 6px;
+  padding: 2px 6px 0px 6px;
 }
 
 #custom-chatgpt {
