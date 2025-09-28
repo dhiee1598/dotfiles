@@ -113,6 +113,65 @@
     "format-disabled": "",
     "interval": 30,
     "on-click": "blueman-manager"
+  },
+
+  // ChatGPT
+  "custom/chatgpt": {
+    "format": "󰚩",
+    "tooltip-format": "ChatGPT",
+    "on-click": "chat-gpt"
+  },
+
+  "custom/spotify-button": {
+    "format": "",
+    "on-click": "spotify",
+    "interval": 0,
+    "tooltip": false
+  },
+
+  "custom/spotify-prev": {
+    "exec": "playerctl --player=spotify metadata 2>/dev/null >/dev/null && echo '⏮' || echo ''",
+    "on-click": "playerctl previous",
+    "interval": 5,
+    "tooltip": false
+  },
+
+  "custom/spotify-play": {
+    "exec": "playerctl --player=spotify metadata 2>/dev/null >/dev/null && echo '⏯' || echo ''",
+    "on-click": "playerctl play-pause",
+    "interval": 5,
+    "tooltip": false
+  },
+
+  "custom/spotify-next": {
+    "exec": "playerctl --player=spotify metadata 2>/dev/null >/dev/null && echo '⏭' || echo ''",
+    "on-click": "playerctl next",
+    "interval": 5,
+    "tooltip": false
+  },
+
+  "custom/spotify-title": {
+    "exec": "playerctl metadata --format '{{title}}' 2>/dev/null || echo ''",
+    "format": "{}",
+    "interval": 5,
+    "tooltip": true
+  },
+
+  // Spotify
+  "group/spotify": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 300,
+      "children-class": "not-memory",
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "custom/spotify-button",
+      "custom/spotify-prev",
+      "custom/spotify-play",
+      "custom/spotify-next",
+      "custom/spotify-title"
+    ]
   }
 }
 

@@ -24,6 +24,8 @@
     "battery",
     "network",
     "group/hardware",
+    "group/spotify",
+    "custom/chatgpt",
     "custom/exit"
   ]
 }

@@ -21,6 +21,7 @@ Welcome to my dotfiles! This provides an overview of the packages I use, configu
 - `stow`: Dotfile manager.
 - `wl-clipboard`: Clipboard utilities for Wayland.
 - `lazygit` Simple terminal UI for git commands.
+- `lazydocker`: Simple terminal UI for Docker and Docker Compose.
 - `ripgrep` Command-line tool for searching text within files.
 - `tmux` Terminal multiplexer.
 - `hyprland`: Wayland compositor.
@@ -29,6 +30,9 @@ Welcome to my dotfiles! This provides an overview of the packages I use, configu
 - `hypridle`: Idle management for Hyprland.
 - `swaync`: Notification center for Wayland.
 - `network-manager-applet` Tray icon and GUI for managing network connections.
+- `docker`: Containerization platform for building and running applications.
+- `docker-compose`: Tool for defining and managing multi-container Docker applications.
+- `dbeaver`: Universal database management tool.
 
 ### Installed via `yay` (AUR):
 - `bibata-cursor-theme`: Cursor theme.
@@ -37,6 +41,7 @@ Welcome to my dotfiles! This provides an overview of the packages I use, configu
 - `wlogout`: Logout menu for Wayland.
 - `hyprshot`: Screenshot tool for Hyprland.
 - `neofetch`: System information tool.
+- `chatgpt-desktop-bin`: Desktop client for ChatGPT.
 
 ---
 
@@ -67,16 +72,6 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 git clone --depth 1 https://github.com/AstroNvim/template ~/.config/nvim
 rm -rf ~/.config/nvim/.git
 nvim
-```
-
----
-
-## Configuration
-
-### VS Code Custom Title Bar
-Add the following to your `settings.json` in VS Code:
-```json
-"window.titleBarStyle": "custom"
 ```
 
 ---
