@@ -24,6 +24,7 @@ Welcome to my dotfiles! This provides an overview of the packages I use, configu
 - `lazydocker`: Simple terminal UI for Docker and Docker Compose.
 - `ripgrep` Command-line tool for searching text within files.
 - `tmux` Terminal multiplexer.
+- `xdg-desktop-portal-hyprland`: Hyprland support for desktop portals.
 - `hyprland`: Wayland compositor.
 - `hyprpaper`: Wallpaper manager for Hyprland.
 - `hyprlock`: Lock screen.
