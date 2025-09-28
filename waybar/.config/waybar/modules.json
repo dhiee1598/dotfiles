@@ -111,6 +111,8 @@
   "bluetooth": {
     "format": " {status}",
     "format-disabled": "",
+    "format-no-controller": "",
+    "hide-if-disabled": true,
     "interval": 30,
     "on-click": "blueman-manager"
   },
