@@ -8,15 +8,14 @@ Welcome to my dotfiles! This provides an overview of the packages I use, configu
 
 A full showcase of my Hyprland setup and tools:
 
-| Application Launcher | Desktop | Hyprlock |
-|----------------------|---------|----------|
-| ![Application Launcher](./screenshots/application-launcher-preview.png) | ![Desktop](./screenshots/desktop-preview.png) | ![Hyprlock](./screenshots/hyprlock-preview.png) |
+| Desktop | Hyprlock | Application Launcher |
+|---------|----------|-----------------------|
+| ![Desktop](./screenshots/desktop-preview.png) | ![Hyprlock](./screenshots/hyprlock-preview.png) | ![Application Launcher](./screenshots/application-launcher-preview.png) |
 
-| LazyGit | Power Options | Tmux with ChatGPT |
-|---------|---------------|-------------------|
-| ![LazyGit](./screenshots/lazygit-preview.png) | ![Power Options](./screenshots/power-option-preview.png) | ![Tmux with ChatGPT](./screenshots/tmux-with-chatgpt-preview.png) |
+| Power Options | Tmux with ChatGPT | LazyGit |
+|---------------|-------------------|---------|
+| ![Power Options](./screenshots/power-option-preview.png) | ![Tmux with ChatGPT](./screenshots/tmux-with-chatgpt-preview.png) | ![LazyGit](./screenshots/lazygit-preview.png) |
 
-![Desktop Preview](./screenshots/test.png)
 
 ### Packages
 
