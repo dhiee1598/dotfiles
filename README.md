@@ -4,6 +4,10 @@ Welcome to my dotfiles! This provides an overview of the packages I use, configu
 
 ---
 
+## Preview
+
+![Desktop Preview](./screenshots/test.png)
+
 ### Packages
 
 ### Installed via `pacman`:
