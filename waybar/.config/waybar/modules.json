@@ -121,7 +121,7 @@
   "custom/chatgpt": {
     "format": "󰚩",
     "tooltip-format": "ChatGPT",
-    "on-click": "chat-gpt"
+    "on-click": "kitty -e gemini"
   },
 
   "custom/spotify-button": {
