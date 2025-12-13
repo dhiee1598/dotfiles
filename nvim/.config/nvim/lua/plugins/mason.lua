@@ -15,6 +15,7 @@ return {
         -- install formatters
         "stylua",
         "black",
+        "pyright",
 
         -- install debuggers
         "debugpy",
