@@ -78,6 +78,10 @@ return {
         -- setting a mapping to false will disable it
         -- ["<C-S>"] = false,
       },
+      i = {
+        ["jk"] = { "<Esc>", desc = "Exit insert mode" },
+        ["jj"] = { "<Esc>", desc = "Exit insert mode" },
+      },
     },
   },
 }
