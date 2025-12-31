@@ -120,7 +120,7 @@
   // ChatGPT
   "custom/chatgpt": {
     "format": "󰚩",
-    "tooltip-format": "ChatGPT",
+    "tooltip-format": "Gemini",
     "on-click": "kitty -e gemini"
   },
 
