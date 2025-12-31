@@ -55,7 +55,7 @@ A full showcase of my Hyprland setup and tools:
 - `wlogout`: Logout menu for Wayland.
 - `hyprshot`: Screenshot tool for Hyprland.
 - `neofetch`: System information tool.
-- `chatgpt-desktop-bin`: Desktop client for ChatGPT.
+- `gemini-cli`: Desktop client for Google Gemini.
 
 ---
 
