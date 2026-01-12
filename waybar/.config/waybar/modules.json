@@ -77,7 +77,7 @@
 
   // Network
   "network": {
-    "format-wifi": " {essid}",
+    "format-wifi": "   {essid}",
     "format-ethernet": "󰈀  {ifname}",
     "format-disconnected": "⚠ Disconnected",
     "tooltip-format-wifi": " {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%",
@@ -91,7 +91,7 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{icon} {capacity}%",
+    "format": "{icon}   {capacity}%",
     "format-charging": " {capacity}%",
     "format-plugged": " {capacity}%",
     "format-icons": ["", "", "", "", ""]
