@@ -1,6 +1,6 @@
 /* === Color Palette === */
 @define-color fg      #93a1a1;  /* base1 - default text */
-@define-color bg      rgba(0, 43, 54, 0.8); /* base03 - background */
+@define-color bg rgba(17, 56, 56, 0.82);
 @define-color accent  #268bd2;  /* blue - highlight/accent */
 @define-color warning #b58900;  /* yellow - warnings */
 @define-color error   #dc322f;  /* red - errors */
