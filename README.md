@@ -8,13 +8,13 @@ Welcome to my dotfiles! This provides an overview of the packages I use, configu
 
 A full showcase of my Hyprland setup and tools:
 
-| Desktop                                       | Hyprlock                                        | Application Launcher                                                    |
-| --------------------------------------------- | ----------------------------------------------- | ----------------------------------------------------------------------- |
-| ![Desktop](./screenshots/desktop-preview.png) | ![Hyprlock](./screenshots/hyprlock-preview.png) | ![Application Launcher](./screenshots/application-launcher-preview.png) |
+| Desktop                                                        | Hyprlock                                        | Application Launcher                                                         |
+| -------------------------------------------------------------- | ----------------------------------------------- | ---------------------------------------------------------------------------- |
+| ![Desktop](./screenshots/2026-04-25-230814_hyprshot.png)       | ![Hyprlock](./screenshots/hyprlock-preview.png) | ![Application Launcher](./screenshots/2026-04-25-230943_hyprshot.png)        |
 
-| Power Options                                            | Tmux with ChatGPT                                                 | LazyGit                                       |
-| -------------------------------------------------------- | ----------------------------------------------------------------- | --------------------------------------------- |
-| ![Power Options](./screenshots/power-option-preview.png) | ![Tmux with ChatGPT](./screenshots/tmux-with-chatgpt-preview.png) | ![LazyGit](./screenshots/lazygit-preview.png) |
+| Power Options                                                  | Terminal                                                        | AstroNvim                                                        |
+| -------------------------------------------------------------- | --------------------------------------------------------------- | ---------------------------------------------------------------- |
+| ![Power Options](./screenshots/2026-04-25-230926_hyprshot.png) | ![Terminal](./screenshots/2026-04-25-230832_hyprshot.png)       | ![AstroNvim](./screenshots/2026-04-25-230838_hyprshot.png)       |
 
 ### Packages
 
@@ -23,7 +23,6 @@ A full showcase of my Hyprland setup and tools:
 - `ttf-firacode-nerd`: Nerd Fonts with Fira Code.
 - `ttf-font-awesome`: Font Awesome icons.
 - `neovim`: Text editor.
-- `firefox`: Web browser.
 - `kitty`: Terminal emulator.
 - `waybar`: Status bar for Wayland.
 - `papirus-icon-theme`: Icon theme.
@@ -48,6 +47,7 @@ A full showcase of my Hyprland setup and tools:
 
 - `bibata-cursor-theme`: Cursor theme.
 - `wlogout`: Logout menu for Wayland.
+- `brave-bin`: Web Browser.
 - `hyprshot`: Screenshot tool for Hyprland.
 - `neofetch`: System information tool.
 
