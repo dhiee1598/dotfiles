@@ -1,78 +1,70 @@
 * {
-    bg-col:      #021e2f;
-    bg-col-light: #082f42;
-    border-col:  #034d48;
-    selected-col: #324860;
-    blue:        #7A828E;
-    fg-col:      #51788A;
-    fg-col2:     #A9AFB9;
-    grey:        #6c7086;
-    
-    // --- New Error Color Definition ---
-    // Using a bright, contrasting color for the alert text
-    error-col:   #D08770; // Soft, attention-grabbing orange/red (Nord-style)
-    
+    bg:           #0d0f18;
+    surface:      #161928;
+    surface-hi:   #23273e;
+    border-col:   rgba(56, 189, 248, 0.28);
+    accent:       #38bdf8;
+    fg:           #dde3f0;
+    fg-muted:     #4a5270;
+    error-col:    #f87171;
+
     width: 600;
-    font: "FiraCode Nerd Font 14";
+    font: "FiraCode Nerd Font 13";
 }
 
-element-text, element-icon , mode-switcher {
+element-text, element-icon, mode-switcher {
     background-color: inherit;
     text-color:       inherit;
 }
 
 window {
-    height: 360px;
-    border: 3px;
-    border-color: @border-col;
-    background-color: @bg-col;
-    border-radius: 5px;
+    height:           380px;
+    border:           1px;
+    border-color:     @border-col;
+    border-radius:    14px;
+    background-color: @bg;
 }
 
 mainbox {
-    background-color: @bg-col;
+    background-color: @bg;
 }
 
 inputbar {
-    children: [prompt,entry];
-    background-color: @bg-col;
-    border-radius: 5px;
-    padding: 2px;
+    children:         [prompt, entry];
+    background-color: @bg;
+    border-radius:    10px;
+    padding:          2px;
 }
 
 prompt {
-    background-color: @blue;
-    padding: 6px;
-    text-color: @bg-col;
-    border-radius: 3px;
-    margin: 20px 0px 0px 20px;
-}
-
-textbox-prompt-colon {
-    expand: false;
-    str: ":";
+    background-color: @accent;
+    padding:          6px 10px;
+    text-color:       @bg;
+    border-radius:    7px;
+    margin:           16px 0px 0px 16px;
 }
 
 entry {
-    padding: 6px;
-    margin: 20px 0px 0px 10px;
-    text-color: @fg-col;
-    background-color: @bg-col;
+    padding:          6px;
+    margin:           16px 0px 0px 10px;
+    text-color:       @fg;
+    background-color: @bg;
 }
 
 listview {
-    border: 0px 0px 0px;
-    padding: 6px 0px 0px;
-    margin: 10px 0px 0px 20px;
-    columns: 2;
-    lines: 5;
-    background-color: @bg-col;
+    border:           0px;
+    padding:          6px 0px 0px;
+    margin:           10px 0px 0px 16px;
+    columns:          2;
+    lines:            5;
+    background-color: @bg;
 }
 
 element {
-    padding: 5px;
-    background-color: @bg-col;
-    text-color: @fg-col  ;
+    padding:          5px;
+    background-color: @bg;
+    text-color:       @fg-muted;
+    border-radius:    7px;
 }
 
 element-icon {
@@ -80,49 +72,40 @@ element-icon {
 }
 
 element selected {
-    background-color:  @selected-col ;
-    text-color: @fg-col2  ;
+    background-color: @surface-hi;
+    text-color:       @fg;
 }
 
 mode-switcher {
     spacing: 0;
- }
+}
 
 button {
-    padding: 10px;
-    background-color: @bg-col-light;
-    text-color: @grey;
-    vertical-align: 0.5; 
-    horizontal-align: 0.5;
+    padding:           10px;
+    background-color:  @surface;
+    text-color:        @fg-muted;
+    vertical-align:    0.5;
+    horizontal-align:  0.5;
 }
 
 button selected {
-  background-color: @bg-col;
-  text-color: @blue;
+    background-color: @bg;
+    text-color:       @accent;
 }
 
-/* 🚨 ENHANCED MESSAGE/ERROR BOX STYLE 🚨 */
 message {
-    background-color: @bg-col-light;
-    margin: 10px 20px 20px 20px; /* Increased margin for separation */
-    padding: 2px;
-    border-radius: 5px;
-    
-    // Add a strong border to draw attention
-    border: 2px;
-    border-color: @error-col;
+    background-color: @surface;
+    margin:           10px 16px 16px 16px;
+    padding:          2px;
+    border-radius:    10px;
+    border:           1px;
+    border-color:     @error-col;
 }
 
 textbox {
-    padding: 6px;
-    // Removing custom margins, letting the parent 'message' handle placement
-    margin: 0; 
-    
-    // CRITICAL: Use the stark error color for the text
-    text-color: @error-col;
-    
-    background-color: @bg-col-light;
-    
-    // Center the text for a clean, alert look
-    horizontal-align: 0.5; 
+    padding:           6px;
+    margin:            0;
+    text-color:        @error-col;
+    background-color:  @surface;
+    horizontal-align:  0.5;
 }

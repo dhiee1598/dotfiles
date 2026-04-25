@@ -14,7 +14,6 @@
     }
   },
 
-
   // Current window title
   "hyprland/window": {
     "separate-outputs": true,
@@ -30,7 +29,7 @@
 
   // Exit / Power menu
   "custom/exit": {
-    "format": " ",
+    "format": "",
     "on-click": "wlogout",
     "tooltip-format": "Power Menu"
   },
@@ -82,7 +81,7 @@
     "format-disconnected": "⚠ Disconnected",
     "tooltip-format-wifi": " {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%",
     "tooltip-format-ethernet": "󰈀 {ifname}\nIP: {ipaddr}",
-    "on-click": "nm-connection-editor"
+    "on-click": "kitty --title nmtui --override background_opacity=1.0 --override background=#1a1b26 --override foreground=#cdd6f4 --override color0=#1a1b26 --override color1=#f38ba8 --override color2=#a6e3a1 --override color3=#f9e2af --override color4=#89b4fa --override color5=#cba6f7 --override color6=#94e2d5 --override color7=#cdd6f4 --override color8=#585b70 --override color9=#f38ba8 --override color10=#a6e3a1 --override color11=#f9e2af --override color12=#89b4fa --override color13=#cba6f7 --override color14=#94e2d5 --override color15=#b4befe -e nmtui"
   },
 
   // Battery
@@ -91,7 +90,8 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{icon}   {capacity}%",
+    "interval": 30,
+    "format": "{icon}  {capacity}%",
     "format-charging": " {capacity}%",
     "format-plugged": " {capacity}%",
     "format-icons": ["", "", "", "", ""]
@@ -99,12 +99,20 @@
 
   // Audio
   "pulseaudio": {
-    "format": "{icon}   {volume}%",
+    "format": "{icon}  {volume}%",
     "format-muted": " Muted",
     "on-click": "pavucontrol",
     "format-icons": {
       "default": ["", "", ""]
     }
+  },
+
+  // Music visualizer (cava)
+  "custom/cava": {
+    "exec": "~/.config/waybar/cava.sh",
+    "format": "{}",
+    "tooltip": false,
+    "escape": false
   },
 
   // Bluetooth
@@ -115,65 +123,5 @@
     "hide-if-disabled": true,
     "interval": 30,
     "on-click": "blueman-manager"
-  },
-
-  // ChatGPT
-  "custom/chatgpt": {
-    "format": "󰚩",
-    "tooltip-format": "Gemini",
-    "on-click": "kitty -e gemini"
-  },
-
-  "custom/spotify-button": {
-    "format": "",
-    "on-click": "spotify",
-    "interval": 0,
-    "tooltip": false
-  },
-
-  "custom/spotify-prev": {
-    "exec": "playerctl --player=spotify metadata 2>/dev/null >/dev/null && echo '⏮' || echo ''",
-    "on-click": "playerctl previous",
-    "interval": 5,
-    "tooltip": false
-  },
-
-  "custom/spotify-play": {
-    "exec": "playerctl --player=spotify metadata 2>/dev/null >/dev/null && echo '⏯' || echo ''",
-    "on-click": "playerctl play-pause",
-    "interval": 5,
-    "tooltip": false
-  },
-
-  "custom/spotify-next": {
-    "exec": "playerctl --player=spotify metadata 2>/dev/null >/dev/null && echo '⏭' || echo ''",
-    "on-click": "playerctl next",
-    "interval": 5,
-    "tooltip": false
-  },
-
-  "custom/spotify-title": {
-    "exec": "playerctl metadata --format '{{title}}' 2>/dev/null || echo ''",
-    "format": "{}",
-    "interval": 5,
-    "tooltip": true
-  },
-
-  // Spotify
-  "group/spotify": {
-    "orientation": "inherit",
-    "drawer": {
-      "transition-duration": 300,
-      "children-class": "not-memory",
-      "transition-left-to-right": false
-    },
-    "modules": [
-      "custom/spotify-button",
-      "custom/spotify-prev",
-      "custom/spotify-play",
-      "custom/spotify-next",
-      "custom/spotify-title"
-    ]
   }
 }
-
