@@ -43,6 +43,7 @@ A full showcase of my Hyprland setup and tools:
 - `swaync`: Notification center for Wayland.
 - `brightnessctl`: Brightness control utility.
 - `dbeaver`: Universal database management tool.
+- `cava`: Display real-time sound waves
 
 ### Installed via `yay` (AUR):
 
