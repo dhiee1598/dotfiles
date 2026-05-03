@@ -1,0 +1,31 @@
+{
+  "layer": "top",
+  "margin-top": 8,
+  "margin-bottom": 0,
+  "margin-left": 12,
+  "margin-right": 12,
+  "spacing": 4,
+
+  "include": ["~/.config/waybar/modules.json"],
+
+  "modules-left": [
+    "custom/arch-logo",
+    "hyprland/workspaces",
+    "hyprland/window",
+    "custom/cava"
+  ],
+
+  "modules-center": [
+    "clock"
+  ],
+
+  "modules-right": [
+    "pulseaudio",
+    "bluetooth",
+    "battery",
+    "network",
+    "group/hardware",
+    "custom/exit"
+  ]
+}
+

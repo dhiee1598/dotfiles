@@ -1,0 +1,111 @@
+* {
+    bg:           #0d0f18;
+    surface:      #161928;
+    surface-hi:   #23273e;
+    border-col:   rgba(56, 189, 248, 0.28);
+    accent:       #38bdf8;
+    fg:           #dde3f0;
+    fg-muted:     #4a5270;
+    error-col:    #f87171;
+
+    width: 600;
+    font: "FiraCode Nerd Font 13";
+}
+
+element-text, element-icon, mode-switcher {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+window {
+    height:           380px;
+    border:           1px;
+    border-color:     @border-col;
+    border-radius:    14px;
+    background-color: @bg;
+}
+
+mainbox {
+    background-color: @bg;
+}
+
+inputbar {
+    children:         [prompt, entry];
+    background-color: @bg;
+    border-radius:    10px;
+    padding:          2px;
+}
+
+prompt {
+    background-color: @accent;
+    padding:          6px 10px;
+    text-color:       @bg;
+    border-radius:    7px;
+    margin:           16px 0px 0px 16px;
+}
+
+entry {
+    padding:          6px;
+    margin:           16px 0px 0px 10px;
+    text-color:       @fg;
+    background-color: @bg;
+}
+
+listview {
+    border:           0px;
+    padding:          6px 0px 0px;
+    margin:           10px 0px 0px 16px;
+    columns:          2;
+    lines:            5;
+    background-color: @bg;
+}
+
+element {
+    padding:          5px;
+    background-color: @bg;
+    text-color:       @fg-muted;
+    border-radius:    7px;
+}
+
+element-icon {
+    size: 25px;
+}
+
+element selected {
+    background-color: @surface-hi;
+    text-color:       @fg;
+}
+
+mode-switcher {
+    spacing: 0;
+}
+
+button {
+    padding:           10px;
+    background-color:  @surface;
+    text-color:        @fg-muted;
+    vertical-align:    0.5;
+    horizontal-align:  0.5;
+}
+
+button selected {
+    background-color: @bg;
+    text-color:       @accent;
+}
+
+message {
+    background-color: @surface;
+    margin:           10px 16px 16px 16px;
+    padding:          2px;
+    border-radius:    10px;
+    border:           1px;
+    border-color:     @error-col;
+}
+
+textbox {
+    padding:           6px;
+    margin:            0;
+    text-color:        @error-col;
+    background-color:  @surface;
+    horizontal-align:  0.5;
+}
