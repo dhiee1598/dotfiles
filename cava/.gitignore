@@ -1,0 +1,3 @@
+# Default cava assets shipped by the package, not user config
+.config/cava/shaders/
+.config/cava/themes/
