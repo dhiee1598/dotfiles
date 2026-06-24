@@ -101,19 +101,32 @@ Install SDDM and the Qt libraries needed by the greeter:
 sudo pacman -S sddm qt5-declarative qt5-quickcontrols2
 ```
 
-Copy the SDDM config into the system config directory:
+Copy the SDDM config into the system config directory. Run this again after changing the dotfiles SDDM config, because SDDM reads `/etc/sddm.conf.d/10-dotfiles.conf` at boot:
 
 ```bash
 sudo mkdir -p /etc/sddm.conf.d
 sudo cp ~/.config/sddm/sddm.conf /etc/sddm.conf.d/10-dotfiles.conf
 ```
 
-Install the custom SDDM theme where the real SDDM service can read it:
+Install the custom SDDM theme where the real SDDM service can read it. Run these again after changing the theme:
 
 ```bash
 sudo mkdir -p /usr/share/sddm/themes
 sudo cp -r ~/.config/sddm/themes/dotfiles-modern /usr/share/sddm/themes/
 sudo cp ~/.config/backgrounds/login.png /usr/share/sddm/themes/dotfiles-modern/login.png
+```
+
+Verify that the system config points to the system theme directory:
+
+```bash
+grep -n "Current\|ThemeDir" /etc/sddm.conf.d/10-dotfiles.conf
+```
+
+Expected output:
+
+```ini
+Current=dotfiles-modern
+ThemeDir=/usr/share/sddm/themes
 ```
 
 Preview the theme before rebooting:
