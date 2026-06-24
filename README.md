@@ -108,10 +108,18 @@ sudo mkdir -p /etc/sddm.conf.d
 sudo cp ~/.config/sddm/sddm.conf /etc/sddm.conf.d/10-dotfiles.conf
 ```
 
+Install the custom SDDM theme where the real SDDM service can read it:
+
+```bash
+sudo mkdir -p /usr/share/sddm/themes
+sudo cp -r ~/.config/sddm/themes/dotfiles-modern /usr/share/sddm/themes/
+sudo cp ~/.config/backgrounds/login.png /usr/share/sddm/themes/dotfiles-modern/login.png
+```
+
 Preview the theme before rebooting:
 
 ```bash
-sddm-greeter --test-mode --theme ~/.config/sddm/themes/dotfiles-modern
+sddm-greeter --test-mode --theme /usr/share/sddm/themes/dotfiles-modern
 ```
 
 If GDM is enabled, disable it before enabling SDDM:
