@@ -1,7 +1,7 @@
 #!/bin/bash
 
 BARS=("▁" "▂" "▃" "▄" "▅" "▆" "▇" "█")
-IDLE_BARS="<span color='#23293a'>▁▁▁▁▁▁▁▁▁▁▁▁</span>"
+IDLE_BARS="<span color='#0d3440'>▁▁▁▁▁▁▁▁▁▁▁▁</span>"
 
 cava -p ~/.config/cava/waybar | while IFS= read -r line; do
     output=""
@@ -10,13 +10,13 @@ cava -p ~/.config/cava/waybar | while IFS= read -r line; do
         (( val > 0 )) && silent=false
         bar="${BARS[$val]:-▁}"
         if (( val >= 6 )); then
-            color="#f0abfc"
+            color="#67e8f9"
         elif (( val >= 4 )); then
-            color="#7dd3fc"
+            color="#22d3ee"
         elif (( val >= 1 )); then
-            color="#5eead4"
+            color="#0891b2"
         else
-            color="#23293a"
+            color="#0d3440"
         fi
         output+="<span color='${color}'>${bar}</span>"
     done

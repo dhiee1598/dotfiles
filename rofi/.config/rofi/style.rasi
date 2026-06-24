@@ -1,14 +1,14 @@
 * {
-    bg:             rgba(10, 12, 18, 0.88);
-    panel:          rgba(24, 28, 39, 0.82);
-    panel-hi:       rgba(35, 41, 58, 0.94);
-    border:         rgba(255, 255, 255, 0.10);
-    border-hi:      rgba(125, 211, 252, 0.36);
-    text:           #e8edf7;
-    muted:          #8992a7;
-    blue:           #7dd3fc;
-    teal:           #5eead4;
-    red:            #fb7185;
+    bg:             rgba(3, 16, 20, 0.90);
+    panel:          rgba(8, 36, 43, 0.86);
+    panel-hi:       rgba(13, 52, 64, 0.96);
+    border:         rgba(34, 211, 238, 0.16);
+    border-hi:      rgba(34, 211, 238, 0.42);
+    text:           #d6faff;
+    muted:          #7aa4ad;
+    blue:           #22d3ee;
+    teal:           #67e8f9;
+    red:            #ff5f6d;
 
     width:          640px;
     font:           "FiraCode Nerd Font 13";
@@ -50,7 +50,7 @@ prompt {
     padding: 7px 12px;
     border-radius: 10px;
     background-color: @blue;
-    text-color: #0a0c12;
+    text-color: #031014;
 }
 
 entry {
@@ -115,9 +115,9 @@ button selected {
 message {
     padding: 8px;
     border: 1px;
-    border-color: rgba(251, 113, 133, 0.35);
+    border-color: rgba(255, 95, 109, 0.35);
     border-radius: 12px;
-    background-color: rgba(251, 113, 133, 0.12);
+    background-color: rgba(255, 95, 109, 0.12);
 }
 
 textbox {

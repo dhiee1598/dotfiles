@@ -94,7 +94,7 @@
     "format-disconnected": "󰤮  Offline",
     "tooltip-format-wifi": " {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%",
     "tooltip-format-ethernet": "󰈀 {ifname}\nIP: {ipaddr}",
-    "on-click": "kitty --title nmtui --override background_opacity=1.0 --override background=#1a1b26 --override foreground=#cdd6f4 --override color0=#1a1b26 --override color1=#f38ba8 --override color2=#a6e3a1 --override color3=#f9e2af --override color4=#89b4fa --override color5=#cba6f7 --override color6=#94e2d5 --override color7=#cdd6f4 --override color8=#585b70 --override color9=#f38ba8 --override color10=#a6e3a1 --override color11=#f9e2af --override color12=#89b4fa --override color13=#cba6f7 --override color14=#94e2d5 --override color15=#b4befe -e nmtui"
+    "on-click": "kitty --title nmtui --override background_opacity=1.0 --override background=#031014 --override foreground=#d6faff --override color0=#031014 --override color1=#ff5f6d --override color2=#22d3ee --override color3=#fde68a --override color4=#0891b2 --override color5=#0e7490 --override color6=#22d3ee --override color7=#7aa4ad --override color8=#0d3440 --override color9=#ff5f6d --override color10=#22d3ee --override color11=#fde68a --override color12=#22d3ee --override color13=#67e8f9 --override color14=#67e8f9 --override color15=#d6faff -e nmtui"
   },
 
   // Battery

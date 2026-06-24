@@ -1,19 +1,19 @@
 /* Waybar - floating glass desk */
 
-@define-color bg          rgba(10, 12, 18, 0.68);
-@define-color panel       rgba(24, 28, 39, 0.78);
-@define-color panel_hi    rgba(35, 41, 58, 0.88);
-@define-color border      rgba(255, 255, 255, 0.08);
-@define-color border_hi   rgba(255, 255, 255, 0.16);
-@define-color text        #e8edf7;
-@define-color muted       #8992a7;
-@define-color blue        #7dd3fc;
-@define-color teal        #5eead4;
-@define-color green       #86efac;
-@define-color yellow      #facc15;
-@define-color orange      #fb923c;
-@define-color red         #fb7185;
-@define-color magenta     #f0abfc;
+@define-color bg          rgba(3, 16, 20, 0.76);
+@define-color panel       rgba(8, 36, 43, 0.84);
+@define-color panel_hi    rgba(13, 52, 64, 0.94);
+@define-color border      rgba(34, 211, 238, 0.16);
+@define-color border_hi   rgba(34, 211, 238, 0.38);
+@define-color text        #d6faff;
+@define-color muted       #7aa4ad;
+@define-color blue        #22d3ee;
+@define-color teal        #67e8f9;
+@define-color green       #22d3ee;
+@define-color yellow      #fde68a;
+@define-color orange      #ffb454;
+@define-color red         #ff5f6d;
+@define-color magenta     #67e8f9;
 
 * {
   border: none;
@@ -37,12 +37,12 @@ window#waybar > box {
   border-radius: 18px;
   box-shadow:
     0 12px 32px rgba(0, 0, 0, 0.52),
-    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    inset 0 1px 0 rgba(34, 211, 238, 0.09);
   padding: 4px;
 }
 
 tooltip {
-  background: rgba(18, 22, 32, 0.96);
+  background: rgba(3, 16, 20, 0.96);
   border: 1px solid @border_hi;
   border-radius: 12px;
   color: @text;
@@ -118,20 +118,20 @@ tooltip label {
 }
 
 #workspaces button:hover {
-  background: rgba(255, 255, 255, 0.07);
+  background: rgba(34, 211, 238, 0.10);
   color: @text;
 }
 
 #workspaces button.active {
-  background: rgba(125, 211, 252, 0.18);
+  background: rgba(34, 211, 238, 0.18);
   box-shadow:
     inset 0 -2px 0 @blue,
-    0 0 16px rgba(125, 211, 252, 0.18);
+    0 0 16px rgba(34, 211, 238, 0.24);
   color: @blue;
 }
 
 #workspaces button.urgent {
-  background: rgba(251, 113, 133, 0.18);
+  background: rgba(255, 95, 109, 0.18);
   box-shadow: inset 0 -2px 0 @red;
   color: @red;
 }
@@ -151,8 +151,8 @@ tooltip label {
 }
 
 #clock {
-  background: rgba(42, 48, 68, 0.9);
-  border-color: rgba(125, 211, 252, 0.24);
+  background: rgba(8, 36, 43, 0.92);
+  border-color: rgba(34, 211, 238, 0.28);
   box-shadow: inset 0 -2px 0 @blue;
   color: @text;
   font-size: 14px;
@@ -196,21 +196,21 @@ tooltip label {
 
 #battery.charging,
 #battery.plugged {
-  background: rgba(134, 239, 172, 0.14);
-  border-color: rgba(134, 239, 172, 0.24);
+  background: rgba(34, 211, 238, 0.14);
+  border-color: rgba(34, 211, 238, 0.26);
   color: @green;
 }
 
 #battery.warning:not(.charging) {
-  background: rgba(250, 204, 21, 0.14);
-  border-color: rgba(250, 204, 21, 0.25);
+  background: rgba(253, 230, 138, 0.14);
+  border-color: rgba(253, 230, 138, 0.25);
   color: @yellow;
 }
 
 #battery.critical:not(.charging) {
-  background: rgba(251, 113, 133, 0.16);
-  border-color: rgba(251, 113, 133, 0.32);
-  box-shadow: 0 0 18px rgba(251, 113, 133, 0.22);
+  background: rgba(255, 95, 109, 0.16);
+  border-color: rgba(255, 95, 109, 0.32);
+  box-shadow: 0 0 18px rgba(255, 95, 109, 0.22);
   color: @red;
 }
 
@@ -219,8 +219,8 @@ tooltip label {
 }
 
 #network.disconnected {
-  background: rgba(251, 113, 133, 0.16);
-  border-color: rgba(251, 113, 133, 0.32);
+  background: rgba(255, 95, 109, 0.16);
+  border-color: rgba(255, 95, 109, 0.32);
   color: @red;
 }
 
@@ -243,7 +243,7 @@ tooltip label {
 }
 
 #custom-exit:hover {
-  background: rgba(251, 113, 133, 0.16);
-  border-color: rgba(251, 113, 133, 0.32);
+  background: rgba(255, 95, 109, 0.16);
+  border-color: rgba(255, 95, 109, 0.32);
   box-shadow: inset 0 -2px 0 @red;
 }
