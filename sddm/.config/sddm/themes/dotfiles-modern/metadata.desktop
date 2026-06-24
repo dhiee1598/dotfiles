@@ -1,0 +1,16 @@
+[SddmGreeterTheme]
+Name=Dotfiles Modern
+Description=Modern glass SDDM theme for this dotfiles setup
+Author=dhiee15
+Copyright=(c) 2026 dhiee15
+License=MIT
+Type=sddm-theme
+Version=1.0
+Website=
+Screenshot=
+MainScript=Main.qml
+ConfigFile=theme.conf
+TranslationsDirectory=translations
+Email=
+Theme-Id=dotfiles-modern
+Theme-API=2.0

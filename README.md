@@ -8,13 +8,13 @@ Welcome to my dotfiles! This provides an overview of the packages I use, configu
 
 A full showcase of my Hyprland setup and tools:
 
-| Desktop                                                        | Hyprlock                                        | Application Launcher                                                         |
-| -------------------------------------------------------------- | ----------------------------------------------- | ---------------------------------------------------------------------------- |
-| ![Desktop](./screenshots/2026-04-25-230814_hyprshot.png)       | ![Hyprlock](./screenshots/hyprlock-preview.png) | ![Application Launcher](./screenshots/2026-04-25-230943_hyprshot.png)        |
+| Desktop                                                  | Hyprlock                                        | Application Launcher                                                  |
+| -------------------------------------------------------- | ----------------------------------------------- | --------------------------------------------------------------------- |
+| ![Desktop](./screenshots/2026-04-25-230814_hyprshot.png) | ![Hyprlock](./screenshots/hyprlock-preview.png) | ![Application Launcher](./screenshots/2026-04-25-230943_hyprshot.png) |
 
-| Power Options                                                  | Terminal                                                        | AstroNvim                                                        |
-| -------------------------------------------------------------- | --------------------------------------------------------------- | ---------------------------------------------------------------- |
-| ![Power Options](./screenshots/2026-04-25-230926_hyprshot.png) | ![Terminal](./screenshots/2026-04-25-230832_hyprshot.png)       | ![AstroNvim](./screenshots/2026-04-25-230838_hyprshot.png)       |
+| Power Options                                                  | Terminal                                                  | AstroNvim                                                  |
+| -------------------------------------------------------------- | --------------------------------------------------------- | ---------------------------------------------------------- |
+| ![Power Options](./screenshots/2026-04-25-230926_hyprshot.png) | ![Terminal](./screenshots/2026-04-25-230832_hyprshot.png) | ![AstroNvim](./screenshots/2026-04-25-230838_hyprshot.png) |
 
 ### Packages
 
@@ -40,6 +40,9 @@ A full showcase of my Hyprland setup and tools:
 - `hyprpaper`: Wallpaper manager for Hyprland.
 - `hyprlock`: Lock screen.
 - `hypridle`: Idle management for Hyprland.
+- `sddm`: Display manager.
+- `qt5-declarative`: Qt Quick runtime required by the SDDM greeter.
+- `qt5-quickcontrols2`: Qt Quick Controls runtime required by the SDDM theme.
 - `swaync`: Notification center for Wayland.
 - `brightnessctl`: Brightness control utility.
 - `dbeaver`: Universal database management tool.
@@ -88,6 +91,40 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 git clone --depth 1 https://github.com/AstroNvim/template ~/.config/nvim
 rm -rf ~/.config/nvim/.git
 nvim
+```
+
+### Setting up `SDDM`
+
+Install SDDM and the Qt libraries needed by the greeter:
+
+```bash
+sudo pacman -S sddm qt5-declarative qt5-quickcontrols2
+```
+
+Copy the SDDM config into the system config directory:
+
+```bash
+sudo mkdir -p /etc/sddm.conf.d
+sudo cp ~/.config/sddm/sddm.conf /etc/sddm.conf.d/10-dotfiles.conf
+```
+
+Preview the theme before rebooting:
+
+```bash
+sddm-greeter --test-mode --theme ~/.config/sddm/themes/dotfiles-modern
+```
+
+If GDM is enabled, disable it before enabling SDDM:
+
+```bash
+systemctl is-enabled gdm
+sudo systemctl disable --now gdm
+```
+
+Enable SDDM:
+
+```bash
+sudo systemctl enable sddm
 ```
 
 ---
