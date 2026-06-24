@@ -1,94 +1,108 @@
-@define-color bg          rgba(13, 15, 24, 0.92);
-@define-color surface     rgba(22, 25, 40, 0.82);
-@define-color surface-hi  rgba(35, 39, 62, 0.96);
-@define-color accent-border rgba(56, 189, 248, 0.28);
-@define-color accent-glow   rgba(56, 189, 248, 0.25);
-@define-color fg          #dde3f0;
+@define-color bg          rgba(10, 12, 18, 0.78);
+@define-color panel       rgba(24, 28, 39, 0.82);
+@define-color panel_hi    rgba(35, 41, 58, 0.94);
+@define-color border      rgba(255, 255, 255, 0.10);
+@define-color blue        #7dd3fc;
+@define-color teal        #5eead4;
+@define-color green       #86efac;
+@define-color yellow      #facc15;
+@define-color orange      #fb923c;
+@define-color red         #fb7185;
+@define-color text        #e8edf7;
+@define-color muted       #8992a7;
 
 * {
-  font-family: "FiraCode Nerd Font", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
   background-image: none;
-  transition: 20ms;
   box-shadow: none;
+  font-family: "FiraCode Nerd Font", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+  transition: 160ms ease;
 }
 
 window {
-  font-size: 16pt;
   background-color: @bg;
-  color: @fg;
-  background-size: cover;
+  color: @text;
+  font-size: 15pt;
 }
 
 button {
+  background-color: @panel;
+  background-position: center 42%;
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: 15%;
-  background-color: @surface;
-  animation: gradient_f 20s ease-in infinite;
-  border-radius: 20px;
-  border: 1px solid @accent-border;
+  background-size: 21%;
+  border: 1px solid @border;
+  border-radius: 18px;
+  color: @muted;
+  margin: 8px;
 }
 
-button:focus {
-  background-size: 15%;
-  border: 1px solid @accent-border;
-}
-
+button:focus,
 button:hover {
-  background-color: @surface-hi;
-  color: @fg;
-  opacity: 1;
-  background-size: 20%;
-  border: 1px solid rgba(56, 189, 248, 0.50);
-  border-radius: 20px;
-  transition:
-    all 0.3s cubic-bezier(0.55, 0, 0.28, 1.682),
-    box-shadow 0.2s ease-in-out,
-    background-color 0.2s ease-in-out;
-  box-shadow: 0 0 30px @accent-glow;
+  background-color: @panel_hi;
+  background-size: 24%;
+  border-color: rgba(125, 211, 252, 0.38);
+  color: @text;
+  box-shadow:
+    0 16px 36px rgba(0, 0, 0, 0.42),
+    inset 0 -3px 0 @blue;
 }
 
 button span {
   font-size: 1em;
+  font-weight: 700;
+  margin-top: 96px;
 }
 
 #lock {
-  margin-bottom: 10px;
-  margin-right: 10px;
-  border-radius: 20px;
   background-image: image(url("icons/lock.png"));
-  min-height: 160px;
+}
+
+#lock:hover,
+#lock:focus {
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.42), inset 0 -3px 0 @blue;
 }
 
 #logout {
-  margin-bottom: 10px;
-  margin-right: 10px;
-  border-radius: 20px;
   background-image: image(url("icons/logout.png"));
 }
 
+#logout:hover,
+#logout:focus {
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.42), inset 0 -3px 0 @teal;
+}
+
 #suspend {
-  margin-bottom: 10px;
-  margin-right: 10px;
-  border-radius: 20px;
   background-image: image(url("icons/suspend.png"));
 }
 
+#suspend:hover,
+#suspend:focus {
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.42), inset 0 -3px 0 @green;
+}
+
 #hibernate {
-  margin-right: 10px;
-  border-radius: 20px;
   background-image: image(url("icons/hibernate.png"));
 }
 
+#hibernate:hover,
+#hibernate:focus {
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.42), inset 0 -3px 0 @yellow;
+}
+
 #shutdown {
-  margin-right: 10px;
-  border-radius: 20px;
   background-image: image(url("icons/shutdown.png"));
-  min-height: 160px;
+}
+
+#shutdown:hover,
+#shutdown:focus {
+  border-color: rgba(251, 113, 133, 0.42);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.42), inset 0 -3px 0 @red;
 }
 
 #reboot {
-  margin-right: 10px;
-  border-radius: 20px;
   background-image: image(url("icons/reboot.png"));
+}
+
+#reboot:hover,
+#reboot:focus {
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.42), inset 0 -3px 0 @orange;
 }

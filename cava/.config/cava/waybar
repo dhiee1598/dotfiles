@@ -1,5 +1,5 @@
 [general]
-bars = 10
+bars = 12
 
 [output]
 method = raw

@@ -6,9 +6,9 @@ configuration{
     location: 0;
     disable-history: false;
     hide-scrollbar: false;
-    display-combi: " 🖥️ All ";
-    display-drun: " 🏃 drun ";
-    display-window: " 🪟 Window";
+    display-combi: " 󰕘 All ";
+    display-drun: " 󰀻 Apps ";
+    display-window: " 󰖲 Windows ";
     sidebar-mode: true;
 }
 

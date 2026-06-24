@@ -6,10 +6,19 @@
     "on-click": "activate",
     "active-only": false,
     "all-outputs": true,
-    "format": "{id}",
+    "format": "{icon}",
     "format-icons": {
-      "default": "",
-      "active": "",
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "10",
+      "default": "",
       "urgent": ""
     }
   },
@@ -17,7 +26,11 @@
   // Current window title
   "hyprland/window": {
     "separate-outputs": true,
-    "max-length": 50
+    "format": "󰣆  {}",
+    "max-length": 58,
+    "rewrite": {
+      "": "Desktop"
+    }
   },
 
   // Arch Rofi launcher
@@ -36,29 +49,29 @@
 
   // Clock
   "clock": {
-    "format": "  {:%I:%M %p}",
-    "format-alt": "  {:%a, %b %d}",
+    "format": "  {:%I:%M}",
+    "format-alt": "  {:%a, %b %d  •  %I:%M %p}",
     "timezone": "Asia/Manila",
     "on-click-right": "gnome-calendar",
-    "tooltip": false
+    "tooltip-format": "<big>{:%A, %B %d}</big>\n<tt>{calendar}</tt>"
   },
 
   // CPU
   "cpu": {
-    "format": "  {usage}%",
+    "format": " {usage}%",
     "tooltip": true
   },
 
   // Memory
   "memory": {
-    "format": "󰍛  {}%",
+    "format": "󰍛 {}%",
     "tooltip": true
   },
 
   // Disk
   "disk": {
     "interval": 30,
-    "format": "  {percentage_used}%",
+    "format": " {percentage_used}%",
     "on-click": "kitty -e htop",
     "path": "/"
   },
@@ -76,9 +89,9 @@
 
   // Network
   "network": {
-    "format-wifi": "   {essid}",
-    "format-ethernet": "󰈀  {ifname}",
-    "format-disconnected": "⚠ Disconnected",
+    "format-wifi": "  {signalStrength}%",
+    "format-ethernet": "󰈀 Wired",
+    "format-disconnected": "󰤮  Offline",
     "tooltip-format-wifi": " {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%",
     "tooltip-format-ethernet": "󰈀 {ifname}\nIP: {ipaddr}",
     "on-click": "kitty --title nmtui --override background_opacity=1.0 --override background=#1a1b26 --override foreground=#cdd6f4 --override color0=#1a1b26 --override color1=#f38ba8 --override color2=#a6e3a1 --override color3=#f9e2af --override color4=#89b4fa --override color5=#cba6f7 --override color6=#94e2d5 --override color7=#cdd6f4 --override color8=#585b70 --override color9=#f38ba8 --override color10=#a6e3a1 --override color11=#f9e2af --override color12=#89b4fa --override color13=#cba6f7 --override color14=#94e2d5 --override color15=#b4befe -e nmtui"
@@ -91,7 +104,7 @@
       "critical": 15
     },
     "interval": 30,
-    "format": "{icon}  {capacity}%",
+    "format": "{icon} {capacity}%",
     "format-charging": " {capacity}%",
     "format-plugged": " {capacity}%",
     "format-icons": ["", "", "", "", ""]
@@ -99,8 +112,8 @@
 
   // Audio
   "pulseaudio": {
-    "format": "{icon}  {volume}%",
-    "format-muted": " Muted",
+    "format": "{icon} {volume}%",
+    "format-muted": " 0%",
     "on-click": "pavucontrol",
     "format-icons": {
       "default": ["", "", ""]
@@ -117,7 +130,8 @@
 
   // Bluetooth
   "bluetooth": {
-    "format": " {status}",
+    "format": "",
+    "format-connected": " {num_connections}",
     "format-disabled": "",
     "format-no-controller": "",
     "hide-if-disabled": true,

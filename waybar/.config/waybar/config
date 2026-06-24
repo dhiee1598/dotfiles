@@ -1,18 +1,21 @@
 {
   "layer": "top",
-  "margin-top": 8,
+  "position": "top",
+  "height": 36,
+  "exclusive": true,
+  "passthrough": false,
+  "margin-top": 10,
   "margin-bottom": 0,
-  "margin-left": 12,
-  "margin-right": 12,
-  "spacing": 4,
+  "margin-left": 16,
+  "margin-right": 16,
+  "spacing": 8,
 
   "include": ["~/.config/waybar/modules.json"],
 
   "modules-left": [
     "custom/arch-logo",
     "hyprland/workspaces",
-    "hyprland/window",
-    "custom/cava"
+    "hyprland/window"
   ],
 
   "modules-center": [
@@ -20,6 +23,7 @@
   ],
 
   "modules-right": [
+    "custom/cava",
     "pulseaudio",
     "bluetooth",
     "battery",
@@ -28,4 +32,3 @@
     "custom/exit"
   ]
 }
-

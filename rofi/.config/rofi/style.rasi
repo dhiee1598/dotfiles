@@ -1,111 +1,127 @@
 * {
-    bg:           #0d0f18;
-    surface:      #161928;
-    surface-hi:   #23273e;
-    border-col:   rgba(56, 189, 248, 0.28);
-    accent:       #38bdf8;
-    fg:           #dde3f0;
-    fg-muted:     #4a5270;
-    error-col:    #f87171;
+    bg:             rgba(10, 12, 18, 0.88);
+    panel:          rgba(24, 28, 39, 0.82);
+    panel-hi:       rgba(35, 41, 58, 0.94);
+    border:         rgba(255, 255, 255, 0.10);
+    border-hi:      rgba(125, 211, 252, 0.36);
+    text:           #e8edf7;
+    muted:          #8992a7;
+    blue:           #7dd3fc;
+    teal:           #5eead4;
+    red:            #fb7185;
 
-    width: 600;
-    font: "FiraCode Nerd Font 13";
+    width:          640px;
+    font:           "FiraCode Nerd Font 13";
 }
 
-element-text, element-icon, mode-switcher {
+element-text,
+element-icon,
+mode-switcher {
     background-color: inherit;
-    text-color:       inherit;
+    text-color: inherit;
 }
 
 window {
-    height:           380px;
-    border:           1px;
-    border-color:     @border-col;
-    border-radius:    14px;
+    transparency: "real";
+    height: 420px;
+    border: 1px;
+    border-color: @border;
+    border-radius: 18px;
     background-color: @bg;
 }
 
 mainbox {
-    background-color: @bg;
+    padding: 14px;
+    spacing: 12px;
+    background-color: transparent;
 }
 
 inputbar {
-    children:         [prompt, entry];
-    background-color: @bg;
-    border-radius:    10px;
-    padding:          2px;
+    children: [prompt, entry];
+    spacing: 10px;
+    padding: 8px;
+    border: 1px;
+    border-color: @border;
+    border-radius: 14px;
+    background-color: @panel;
 }
 
 prompt {
-    background-color: @accent;
-    padding:          6px 10px;
-    text-color:       @bg;
-    border-radius:    7px;
-    margin:           16px 0px 0px 16px;
+    padding: 7px 12px;
+    border-radius: 10px;
+    background-color: @blue;
+    text-color: #0a0c12;
 }
 
 entry {
-    padding:          6px;
-    margin:           16px 0px 0px 10px;
-    text-color:       @fg;
-    background-color: @bg;
+    padding: 7px 4px;
+    background-color: transparent;
+    text-color: @text;
+    placeholder-color: @muted;
 }
 
 listview {
-    border:           0px;
-    padding:          6px 0px 0px;
-    margin:           10px 0px 0px 16px;
-    columns:          2;
-    lines:            5;
-    background-color: @bg;
+    columns: 2;
+    lines: 5;
+    spacing: 8px;
+    border: 0;
+    background-color: transparent;
 }
 
 element {
-    padding:          5px;
-    background-color: @bg;
-    text-color:       @fg-muted;
-    border-radius:    7px;
+    padding: 9px;
+    spacing: 10px;
+    border: 1px;
+    border-color: transparent;
+    border-radius: 12px;
+    background-color: transparent;
+    text-color: @muted;
 }
 
 element-icon {
-    size: 25px;
+    size: 26px;
 }
 
 element selected {
-    background-color: @surface-hi;
-    text-color:       @fg;
+    border-color: @border-hi;
+    background-color: @panel-hi;
+    text-color: @text;
+}
+
+element selected element-icon {
+    text-color: @teal;
 }
 
 mode-switcher {
-    spacing: 0;
+    spacing: 8px;
+    background-color: transparent;
 }
 
 button {
-    padding:           10px;
-    background-color:  @surface;
-    text-color:        @fg-muted;
-    vertical-align:    0.5;
-    horizontal-align:  0.5;
+    padding: 8px 12px;
+    border: 1px;
+    border-color: @border;
+    border-radius: 12px;
+    background-color: @panel;
+    text-color: @muted;
 }
 
 button selected {
-    background-color: @bg;
-    text-color:       @accent;
+    border-color: @border-hi;
+    background-color: @panel-hi;
+    text-color: @blue;
 }
 
 message {
-    background-color: @surface;
-    margin:           10px 16px 16px 16px;
-    padding:          2px;
-    border-radius:    10px;
-    border:           1px;
-    border-color:     @error-col;
+    padding: 8px;
+    border: 1px;
+    border-color: rgba(251, 113, 133, 0.35);
+    border-radius: 12px;
+    background-color: rgba(251, 113, 133, 0.12);
 }
 
 textbox {
-    padding:           6px;
-    margin:            0;
-    text-color:        @error-col;
-    background-color:  @surface;
-    horizontal-align:  0.5;
+    padding: 6px;
+    background-color: transparent;
+    text-color: @red;
 }

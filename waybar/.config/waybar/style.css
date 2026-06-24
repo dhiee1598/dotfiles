@@ -1,162 +1,167 @@
-/* ════════════════════════════════════════════════
-   WAYBAR — Premium Dark Theme
-   Base: #0d0f18  |  Accent: #38bdf8 (Sky Cyan)
-   ════════════════════════════════════════════════ */
+/* Waybar - floating glass desk */
 
-/* === Design Tokens === */
-@define-color bg           rgba(13, 15, 24, 0.92);
-@define-color surface      rgba(22, 25, 40, 0.82);
-@define-color surface-hi   rgba(35, 39, 62, 0.96);
-@define-color border       rgba(255, 255, 255, 0.06);
-@define-color border-hi    rgba(255, 255, 255, 0.11);
-@define-color fg            #dde3f0;
-@define-color fg-muted      #4a5270;
-@define-color accent        #38bdf8;
-@define-color accent-soft   rgba(56, 189, 248, 0.16);
-@define-color accent-border rgba(56, 189, 248, 0.28);
-@define-color good          #34d399;
-@define-color good-soft     rgba(52, 211, 153, 0.14);
-@define-color good-border   rgba(52, 211, 153, 0.25);
-@define-color warning       #fbbf24;
-@define-color warning-soft  rgba(251, 191, 36, 0.14);
-@define-color warning-border rgba(251, 191, 36, 0.25);
-@define-color error         #f87171;
-@define-color error-soft    rgba(248, 113, 113, 0.14);
-@define-color error-border  rgba(248, 113, 113, 0.25);
-@define-color purple        #a78bfa;
+@define-color bg          rgba(10, 12, 18, 0.68);
+@define-color panel       rgba(24, 28, 39, 0.78);
+@define-color panel_hi    rgba(35, 41, 58, 0.88);
+@define-color border      rgba(255, 255, 255, 0.08);
+@define-color border_hi   rgba(255, 255, 255, 0.16);
+@define-color text        #e8edf7;
+@define-color muted       #8992a7;
+@define-color blue        #7dd3fc;
+@define-color teal        #5eead4;
+@define-color green       #86efac;
+@define-color yellow      #facc15;
+@define-color orange      #fb923c;
+@define-color red         #fb7185;
+@define-color magenta     #f0abfc;
 
-/* === Reset === */
 * {
-  font-family: "FiraCode Nerd Font", "Font Awesome 6 Free", "Roboto", monospace;
-  font-size: 13px;
   border: none;
-  outline: none;
+  border-radius: 0;
+  font-family: "FiraCode Nerd Font", "JetBrainsMono Nerd Font", "Font Awesome 6 Free", monospace;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0;
   min-height: 0;
+  outline: none;
 }
 
-/* ════════════ BAR ════════════ */
 window#waybar {
-  background: @bg;
-  border-radius: 14px;
-  border: 1px solid @border;
-  box-shadow:
-    0 8px 40px rgba(0, 0, 0, 0.65),
-    inset 0 1px 0 rgba(255, 255, 255, 0.04);
-  transition: background 0.3s ease;
+  background: transparent;
+  color: @text;
 }
 
-/* ════════════ TOOLTIP ════════════ */
+window#waybar > box {
+  background: @bg;
+  border: 1px solid @border;
+  border-radius: 18px;
+  box-shadow:
+    0 12px 32px rgba(0, 0, 0, 0.52),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  padding: 4px;
+}
+
 tooltip {
-  background: @surface-hi;
-  border: 1px solid @border-hi;
-  border-radius: 10px;
-  padding: 6px 12px;
-  color: @fg;
+  background: rgba(18, 22, 32, 0.96);
+  border: 1px solid @border_hi;
+  border-radius: 12px;
+  color: @text;
+  padding: 10px 12px;
 }
 
 tooltip label {
-  color: @fg;
+  color: @text;
 }
 
-/* ════════════════════════════════════
-   LEFT
-   ════════════════════════════════════ */
+#custom-arch-logo,
+#workspaces,
+#window,
+#custom-cava,
+#clock,
+#pulseaudio,
+#bluetooth,
+#battery,
+#network,
+#cpu,
+#memory,
+#disk,
+#custom-exit {
+  background: @panel;
+  border: 1px solid @border;
+  border-radius: 13px;
+  margin: 0 2px;
+  min-height: 26px;
+  transition-duration: 180ms;
+  transition-property: background, border-color, color, box-shadow;
+}
 
-/* Arch Logo — Rofi launcher */
+#custom-arch-logo:hover,
+#window:hover,
+#custom-cava:hover,
+#clock:hover,
+#pulseaudio:hover,
+#bluetooth:hover,
+#battery:hover,
+#network:hover,
+#cpu:hover,
+#memory:hover,
+#disk:hover,
+#custom-exit:hover {
+  background: @panel_hi;
+  border-color: @border_hi;
+}
+
 #custom-arch-logo {
   background-image: url("./arch-icon.svg");
-  background-size: 18px 18px;
-  background-repeat: no-repeat;
   background-position: center;
-  padding: 0 15px;
-  margin: 4px 2px 4px 6px;
-  border-radius: 10px;
-  opacity: 0.75;
-  transition: all 0.2s ease;
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  margin-left: 0;
+  padding: 0 16px;
 }
 
 #custom-arch-logo:hover {
-  background-color: @surface;
-  opacity: 1;
+  box-shadow: inset 0 -2px 0 @blue;
 }
 
-/* Workspaces */
 #workspaces {
-  background: @surface;
-  border: 1px solid @border;
-  border-radius: 10px;
   padding: 0 4px;
-  margin: 4px 0;
 }
 
 #workspaces button {
-  padding: 2px 12px;
-  margin: 3px 2px;
-  color: @fg-muted;
   background: transparent;
-  border-radius: 7px;
-  font-weight: 500;
-  transition: all 0.18s ease;
+  border-radius: 10px;
+  color: @muted;
+  margin: 3px 1px;
+  min-width: 26px;
+  padding: 0 7px;
 }
 
 #workspaces button:hover {
-  background: @surface-hi;
-  color: @fg;
+  background: rgba(255, 255, 255, 0.07);
+  color: @text;
 }
 
 #workspaces button.active {
-  background: @accent-soft;
-  color: @accent;
-  font-weight: 600;
-  box-shadow: 0 0 0 1px @accent-border;
+  background: rgba(125, 211, 252, 0.18);
+  box-shadow:
+    inset 0 -2px 0 @blue,
+    0 0 16px rgba(125, 211, 252, 0.18);
+  color: @blue;
 }
 
 #workspaces button.urgent {
-  background: @error-soft;
-  color: @error;
-  animation: urgent-pulse 0.9s ease-in-out infinite alternate;
+  background: rgba(251, 113, 133, 0.18);
+  box-shadow: inset 0 -2px 0 @red;
+  color: @red;
 }
 
-@keyframes urgent-pulse {
-  from { box-shadow: 0 0 0 rgba(248, 113, 113, 0); }
-  to   { box-shadow: 0 0 10px rgba(248, 113, 113, 0.45); }
-}
-
-/* Window Title */
 #window {
-  color: @fg-muted;
-  font-style: italic;
+  color: @muted;
   font-size: 12px;
-  padding: 0 10px;
-  margin: 4px 0;
+  font-weight: 500;
+  padding: 0 12px;
 }
 
-/* ════════════════════════════════════
-   CENTER
-   ════════════════════════════════════ */
+#custom-cava {
+  color: @teal;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 0 10px;
+}
 
 #clock {
-  background: @surface;
-  border: 1px solid @border;
-  border-radius: 10px;
-  color: @fg;
-  font-weight: 600;
-  font-size: 13px;
-  letter-spacing: 0.4px;
-  padding: 4px 18px;
-  margin: 4px 0;
-  transition: all 0.2s ease;
+  background: rgba(42, 48, 68, 0.9);
+  border-color: rgba(125, 211, 252, 0.24);
+  box-shadow: inset 0 -2px 0 @blue;
+  color: @text;
+  font-size: 14px;
+  padding: 0 18px;
 }
 
 #clock:hover {
-  background: @surface-hi;
-  color: @accent;
-  border-color: @accent-border;
+  color: @blue;
 }
-
-/* ════════════════════════════════════
-   RIGHT — shared pill style
-   ════════════════════════════════════ */
 
 #pulseaudio,
 #bluetooth,
@@ -165,126 +170,80 @@ tooltip label {
 #cpu,
 #memory,
 #disk {
-  background: @surface;
-  border: 1px solid @border;
-  border-radius: 10px;
-  color: @fg;
-  padding: 4px 12px;
-  margin: 4px 2px;
-  transition: all 0.2s ease;
+  padding: 0 11px;
 }
 
-#pulseaudio:hover,
-#bluetooth:hover,
-#battery:hover,
-#network:hover,
-#cpu:hover,
-#memory:hover,
-#disk:hover {
-  background: @surface-hi;
-  border-color: @border-hi;
-}
-
-/* === Audio === */
 #pulseaudio {
-  color: @fg;
+  color: @magenta;
 }
 
 #pulseaudio.muted {
-  color: @fg-muted;
+  color: @muted;
 }
 
-/* === Bluetooth === */
 #bluetooth {
-  color: #60a5fa;
+  color: @blue;
 }
 
 #bluetooth.off,
 #bluetooth.disabled {
-  color: @fg-muted;
+  color: @muted;
 }
 
-/* === Network === */
-#network {
-  color: @good;
-}
-
-#network.disconnected {
-  color: @error;
-  background: @error-soft;
-  border-color: @error-border;
-}
-
-/* === Battery === */
 #battery {
-  color: @good;
+  color: @green;
 }
 
 #battery.charging,
 #battery.plugged {
-  color: @good;
-  background: @good-soft;
-  border-color: @good-border;
+  background: rgba(134, 239, 172, 0.14);
+  border-color: rgba(134, 239, 172, 0.24);
+  color: @green;
 }
 
 #battery.warning:not(.charging) {
-  color: @warning;
-  background: @warning-soft;
-  border-color: @warning-border;
+  background: rgba(250, 204, 21, 0.14);
+  border-color: rgba(250, 204, 21, 0.25);
+  color: @yellow;
 }
 
 #battery.critical:not(.charging) {
-  color: @error;
-  background: @error-soft;
-  border-color: @error-border;
-  animation: critical-pulse 1.1s ease-in-out infinite alternate;
+  background: rgba(251, 113, 133, 0.16);
+  border-color: rgba(251, 113, 133, 0.32);
+  box-shadow: 0 0 18px rgba(251, 113, 133, 0.22);
+  color: @red;
 }
 
-@keyframes critical-pulse {
-  from { box-shadow: 0 0 0 rgba(248, 113, 113, 0); }
-  to   { box-shadow: 0 0 10px rgba(248, 113, 113, 0.4); }
+#network {
+  color: @teal;
 }
 
-/* === Hardware === */
+#network.disconnected {
+  background: rgba(251, 113, 133, 0.16);
+  border-color: rgba(251, 113, 133, 0.32);
+  color: @red;
+}
+
 #cpu {
-  color: @purple;
+  color: @magenta;
 }
 
 #memory {
-  color: @accent;
+  color: @blue;
 }
 
 #disk {
-  color: #fb923c;
+  color: @orange;
 }
-
-/* ════════════════════════════════════
-   CAVA VISUALIZER
-   ════════════════════════════════════ */
-
-#custom-cava {
-  font-size: 15px;
-  letter-spacing: -2px;
-  padding: 0 8px;
-  color: @good;
-}
-
-/* ════════════════════════════════════
-   EXIT / POWER
-   ════════════════════════════════════ */
 
 #custom-exit {
-  background: @surface;
-  border: 1px solid @error-border;
-  border-radius: 10px;
-  color: @error;
-  font-size: 14px;
-  padding: 4px 13px 4px 10px;
-  margin: 4px 6px 4px 2px;
-  transition: all 0.2s ease;
+  color: @red;
+  margin-right: 0;
+  padding: 0 12px;
 }
 
 #custom-exit:hover {
-  background: @error-soft;
-  border-color: rgba(248, 113, 113, 0.4);
+  background: rgba(251, 113, 133, 0.16);
+  border-color: rgba(251, 113, 133, 0.32);
+  box-shadow: inset 0 -2px 0 @red;
 }
