@@ -82,6 +82,35 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 sudo systemctl enable --now bluetooth
 ```
 
+### Setting up CAVA for Waybar
+
+If the CAVA module does not show in Waybar after a fresh install, set CAVA to use the speaker/output monitor instead of the microphone.
+
+Find the default output sink and available monitor sources:
+
+```bash
+pactl get-default-sink
+pactl list short sources
+```
+
+Edit `~/.config/cava/waybar` and add an input block that points to the matching `.monitor` source:
+
+```ini
+[input]
+method = pulse
+source = alsa_output.YOUR_OUTPUT.monitor
+```
+
+Example:
+
+```ini
+[input]
+method = pulse
+source = alsa_output.pci-0000_00_1f.3.analog-stereo.monitor
+```
+
+Restart Waybar after changing the source.
+
 ### Install `Oh My Zsh`
 
 ```bash
