@@ -104,12 +104,6 @@ nvim
 
 ### Setting up `SDDM`
 
-Install SDDM and the Qt libraries needed by the greeter:
-
-```bash
-sudo pacman -S sddm qt5-declarative qt5-quickcontrols2
-```
-
 Copy the SDDM config into the system config directory. Run this again after changing the dotfiles SDDM config, because SDDM reads `/etc/sddm.conf.d/10-dotfiles.conf` at boot:
 
 ```bash
@@ -142,19 +136,6 @@ Preview the theme before rebooting:
 
 ```bash
 sddm-greeter --test-mode --theme /usr/share/sddm/themes/dotfiles-modern
-```
-
-If GDM is enabled, disable it before enabling SDDM:
-
-```bash
-systemctl is-enabled gdm
-sudo systemctl disable --now gdm
-```
-
-Enable SDDM:
-
-```bash
-sudo systemctl enable sddm
 ```
 
 ---
