@@ -1,15 +1,15 @@
-@define-color bg          rgba(3, 16, 20, 0.82);
-@define-color panel       rgba(8, 36, 43, 0.86);
-@define-color panel_hi    rgba(13, 52, 64, 0.96);
-@define-color border      rgba(34, 211, 238, 0.16);
-@define-color blue        #22d3ee;
-@define-color teal        #67e8f9;
-@define-color green       #22d3ee;
-@define-color yellow      #fde68a;
-@define-color orange      #ffb454;
-@define-color red         #ff5f6d;
-@define-color text        #d6faff;
-@define-color muted       #7aa4ad;
+@define-color bg          rgba(0, 5, 7, 0.88);
+@define-color panel       rgba(3, 17, 22, 0.91);
+@define-color panel_hi    rgba(5, 34, 42, 0.97);
+@define-color border      rgba(0, 190, 220, 0.18);
+@define-color blue        #00c2df;
+@define-color teal        #00e5ff;
+@define-color green       #00c2df;
+@define-color yellow      #d9983d;
+@define-color orange      #d93a18;
+@define-color red         #d93a18;
+@define-color text        #d9f7fb;
+@define-color muted       #6f9299;
 
 * {
   background-image: none;
@@ -39,7 +39,7 @@ button:focus,
 button:hover {
   background-color: @panel_hi;
   background-size: 24%;
-  border-color: rgba(34, 211, 238, 0.42);
+  border-color: rgba(0, 190, 220, 0.44);
   color: @text;
   box-shadow:
     0 16px 36px rgba(0, 0, 0, 0.42),
@@ -94,7 +94,7 @@ button span {
 
 #shutdown:hover,
 #shutdown:focus {
-  border-color: rgba(255, 95, 109, 0.42);
+  border-color: rgba(217, 58, 24, 0.46);
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.42), inset 0 -3px 0 @red;
 }
 

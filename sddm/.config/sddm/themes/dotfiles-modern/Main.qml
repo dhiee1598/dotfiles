@@ -6,13 +6,13 @@ Rectangle {
     id: root
     width: 1920
     height: 1080
-    color: "#031014"
+    color: "#000507"
 
     property string fontName: config.font || "FiraCode Nerd Font"
-    property string accent: config.accent || "#22d3ee"
-    property string accentAlt: config.accentAlt || "#67e8f9"
-    property string textColor: config.text || "#d6faff"
-    property string mutedColor: config.muted || "#7aa4ad"
+    property string accent: config.accent || "#00c2df"
+    property string accentAlt: config.accentAlt || "#00e5ff"
+    property string textColor: config.text || "#d9f7fb"
+    property string mutedColor: config.muted || "#6f9299"
     property date now: new Date()
     property int sidePanelWidth: Math.min(root.width - 56, Math.max(520, root.width * 0.34))
     property int loginCardWidth: Math.min(sidePanelWidth - 96, 390)
@@ -41,9 +41,9 @@ Rectangle {
     Rectangle {
         anchors.fill: parent
         gradient: Gradient {
-            GradientStop { position: 0.0; color: "#a0031014" }
-            GradientStop { position: 0.52; color: "#7a08242b" }
-            GradientStop { position: 1.0; color: "#c0031014" }
+            GradientStop { position: 0.0; color: "#b0000507" }
+            GradientStop { position: 0.52; color: "#84031116" }
+            GradientStop { position: 1.0; color: "#d0000507" }
         }
     }
 
@@ -52,18 +52,18 @@ Rectangle {
         width: root.sidePanelWidth
         height: parent.height
         anchors.right: parent.right
-        color: "#c0031014"
+        color: "#d0000507"
         border.width: 1
-        border.color: "#3022d3ee"
+        border.color: "#3000c2df"
 
         Rectangle {
             width: 1
             height: parent.height
             anchors.left: parent.left
             gradient: Gradient {
-                GradientStop { position: 0.0; color: "#0022d3ee" }
-                GradientStop { position: 0.50; color: "#4222d3ee" }
-                GradientStop { position: 1.0; color: "#0022d3ee" }
+                GradientStop { position: 0.0; color: "#0000c2df" }
+                GradientStop { position: 0.50; color: "#4000c2df" }
+                GradientStop { position: 1.0; color: "#0000c2df" }
             }
         }
     }
@@ -73,7 +73,7 @@ Rectangle {
         width: root.loginCardWidth
         height: root.loginCardHeight
         radius: 22
-        color: "#d008242b"
+        color: "#d0031116"
         border.width: 0
         anchors {
             horizontalCenter: sidePanel.horizontalCenter
@@ -128,7 +128,7 @@ Rectangle {
         Rectangle {
             Layout.fillWidth: true
             Layout.preferredHeight: 1
-            color: "#3322d3ee"
+            color: "#3300c2df"
         }
 
         ColumnLayout {
@@ -163,7 +163,7 @@ Rectangle {
                 text: userModel.lastUser
                 placeholderText: "Username"
                 color: root.textColor
-                selectedTextColor: "#031014"
+                selectedTextColor: "#000507"
                 selectionColor: root.accent
                 font.family: root.fontName
                 font.pixelSize: 14
@@ -171,9 +171,9 @@ Rectangle {
                 rightPadding: 16
                 background: Rectangle {
                     radius: 14
-                    color: username.activeFocus ? "#e30d3440" : "#c008242b"
+                    color: username.activeFocus ? "#e305222a" : "#c0031116"
                     border.width: 1
-                    border.color: username.activeFocus ? root.accent : "#3022d3ee"
+                    border.color: username.activeFocus ? root.accent : "#3000c2df"
                 }
                 onAccepted: password.forceActiveFocus()
             }
@@ -185,7 +185,7 @@ Rectangle {
                 placeholderText: "Password"
                 echoMode: TextInput.Password
                 color: root.textColor
-                selectedTextColor: "#031014"
+                selectedTextColor: "#000507"
                 selectionColor: root.accent
                 font.family: root.fontName
                 font.pixelSize: 14
@@ -193,9 +193,9 @@ Rectangle {
                 rightPadding: 16
                 background: Rectangle {
                     radius: 14
-                    color: password.activeFocus ? "#e30d3440" : "#c008242b"
+                    color: password.activeFocus ? "#e305222a" : "#c0031116"
                     border.width: 1
-                    border.color: password.activeFocus ? root.accent : "#3022d3ee"
+                    border.color: password.activeFocus ? root.accent : "#3000c2df"
                 }
                 onAccepted: root.submitLogin()
                 Component.onCompleted: forceActiveFocus()
@@ -212,9 +212,9 @@ Rectangle {
                 font.pixelSize: 13
                 background: Rectangle {
                     radius: 14
-                    color: "#c008242b"
+                    color: "#c0031116"
                     border.width: 1
-                    border.color: "#3022d3ee"
+                    border.color: "#3000c2df"
                 }
                 contentItem: Text {
                     text: session.displayText
@@ -231,7 +231,7 @@ Rectangle {
                 id: message
                 Layout.fillWidth: true
                 Layout.preferredHeight: 18
-                color: "#ff5f6d"
+                color: "#d93a18"
                 font.family: root.fontName
                 font.pixelSize: 12
                 horizontalAlignment: Text.AlignHCenter
@@ -249,7 +249,7 @@ Rectangle {
                 onClicked: root.submitLogin()
                 contentItem: Text {
                     text: loginButton.text
-                    color: "#031014"
+                    color: "#000507"
                     font: loginButton.font
                     horizontalAlignment: Text.AlignHCenter
                     verticalAlignment: Text.AlignVCenter
@@ -291,9 +291,9 @@ Rectangle {
             }
             background: Rectangle {
                 radius: 12
-                color: sleepButton.hovered ? "#df0d3440" : "#c008242b"
+                color: sleepButton.hovered ? "#df05222a" : "#c0031116"
                 border.width: 1
-                border.color: sleepButton.hovered ? root.accent : "#3022d3ee"
+                border.color: sleepButton.hovered ? root.accent : "#3000c2df"
             }
         }
 
@@ -314,9 +314,9 @@ Rectangle {
             }
             background: Rectangle {
                 radius: 12
-                color: restartButton.hovered ? "#df0d3440" : "#c008242b"
+                color: restartButton.hovered ? "#df05222a" : "#c0031116"
                 border.width: 1
-                border.color: restartButton.hovered ? root.accent : "#3022d3ee"
+                border.color: restartButton.hovered ? root.accent : "#3000c2df"
             }
         }
 
@@ -337,9 +337,9 @@ Rectangle {
             }
             background: Rectangle {
                 radius: 12
-                color: powerButton.hovered ? "#df0d3440" : "#c008242b"
+                color: powerButton.hovered ? "#df05222a" : "#c0031116"
                 border.width: 1
-                border.color: powerButton.hovered ? root.accent : "#3022d3ee"
+                border.color: powerButton.hovered ? root.accent : "#3000c2df"
             }
         }
     }
