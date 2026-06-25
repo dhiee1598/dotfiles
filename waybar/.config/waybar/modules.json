@@ -123,6 +123,7 @@
   // Music visualizer (cava)
   "custom/cava": {
     "exec": "~/.config/waybar/cava.sh",
+    "restart-interval": 1,
     "format": "{}",
     "tooltip": false,
     "escape": false

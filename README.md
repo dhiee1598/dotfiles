@@ -35,6 +35,9 @@ A full showcase of my Hyprland setup and tools:
 - `lazygit` Simple terminal UI for git commands.
 - `ripgrep` Command-line tool for searching text within files.
 - `tmux` Terminal multiplexer.
+- `bluez`: Bluetooth protocol stack.
+- `bluez-utils`: Bluetooth command-line utilities.
+- `blueman`: Bluetooth manager used by Waybar.
 - `xdg-desktop-portal-hyprland`: Hyprland support for desktop portals.
 - `hyprland`: Wayland compositor.
 - `hyprpaper`: Wallpaper manager for Hyprland.
@@ -71,6 +74,12 @@ git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 
 ```bash
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+### Enabling Bluetooth
+
+```bash
+sudo systemctl enable --now bluetooth
 ```
 
 ### Install `Oh My Zsh`
