@@ -14,7 +14,7 @@
 
   "modules-left": [
     "custom/arch-logo",
-    "hyprland/workspaces",
+    "ext/workspaces",
     "hyprland/window"
   ],
 

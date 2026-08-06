@@ -1,11 +1,10 @@
 {
-  // === Hyprland Workspaces ===
-  "hyprland/workspaces": {
-    "on-scroll-up": "hyprctl dispatch workspace r-1",
-    "on-scroll-down": "hyprctl dispatch workspace r+1",
+  // === Workspaces ===
+  "ext/workspaces": {
     "on-click": "activate",
     "active-only": false,
     "all-outputs": true,
+    "sort-by-name": true,
     "format": "{icon}",
     "format-icons": {
       "1": "1",

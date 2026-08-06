@@ -84,6 +84,7 @@ hl.config({
 	},
 
 	master = { new_status = "master" },
+	dwindle = { preserve_split = true },
 
 	binds = {
 		workspace_back_and_forth = true,
@@ -126,6 +127,7 @@ hl.bind(mainMod .. " + F4", hl.dsp.exec_cmd("wlogout"))
 hl.bind(mainMod .. " + q", hl.dsp.window.close())
 hl.bind(mainMod .. " + f", hl.dsp.window.fullscreen())
 hl.bind(mainMod .. " + t", hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mainMod .. " + a", hl.dsp.layout("togglesplit"))
 
 hl.bind(mainMod .. " + h", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + l", hl.dsp.focus({ direction = "right" }))
@@ -136,12 +138,17 @@ hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + up", hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + down", hl.dsp.focus({ direction = "down" }))
 
+hl.bind(mainMod .. " + SHIFT + h", hl.dsp.window.swap({ direction = "l" }))
+hl.bind(mainMod .. " + SHIFT + l", hl.dsp.window.swap({ direction = "r" }))
+hl.bind(mainMod .. " + SHIFT + k", hl.dsp.window.swap({ direction = "u" }))
+hl.bind(mainMod .. " + SHIFT + j", hl.dsp.window.swap({ direction = "d" }))
+
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
-hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.resize({ x = 100, y = 0 }))
-hl.bind(mainMod .. " + SHIFT + left", hl.dsp.window.resize({ x = -100, y = 0 }))
-hl.bind(mainMod .. " + SHIFT + down", hl.dsp.window.resize({ x = 0, y = 100 }))
-hl.bind(mainMod .. " + SHIFT + up", hl.dsp.window.resize({ x = 0, y = -100 }))
+hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.resize({ x = 100, y = 0, relative = true }), { repeating = true })
+hl.bind(mainMod .. " + SHIFT + left", hl.dsp.window.resize({ x = -100, y = 0, relative = true }), { repeating = true })
+hl.bind(mainMod .. " + SHIFT + down", hl.dsp.window.resize({ x = 0, y = 100, relative = true }), { repeating = true })
+hl.bind(mainMod .. " + SHIFT + up", hl.dsp.window.resize({ x = 0, y = -100, relative = true }), { repeating = true })
 
 hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m output"))
 hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd("hyprshot -m region"))
@@ -156,7 +163,7 @@ hl.bind(mainMod .. " + Tab", hl.dsp.focus({ workspace = "m+1" }))
 hl.bind(mainMod .. " + SHIFT + Tab", hl.dsp.focus({ workspace = "m-1" }))
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
-hl.bind(mainMod .. " + CTRL + down", hl.dsp.focus({ workspace = "empty" }))
+hl.bind(mainMod .. " + CTRL + e", hl.dsp.focus({ workspace = "empty" }))
 
 local mediaBinds = {
 	{ "XF86MonBrightnessUp", "swayosd-client --brightness raise" },
